@@ -1,0 +1,272 @@
+#================================================================================================
+# Instrumentation for Spring Boot Framework
+# Author: Andreas Reiss (andreas.reiss@ca.com)
+# Date: May 2006
+# Version: 1.0
+# Changes:
+#     DATE     |       AUTHOR        |       COMMENTS
+#------------------------------------------------------------------------------------------------
+#   17.05.16   | Andreas Reiss       | Initial Creation
+#================================================================================================
+
+
+
+#================================================================================================
+#
+# Overwriting the OOTB Frontend Tracer for a meaningful App Name
+#
+#================================================================================================
+
+SetTracerClassMapping: SpringBootFilterTracer com.wily.field.spring.boot.SpringBootFilterTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: SpringBootFilterTracer generatebusinesstransactionmetrics true
+SetTracerParameter: SpringBootFilterTracer usecomputedblame true
+SetTracerParameter: SpringBootFilterTracer newmode true
+SetTracerParameter: SpringBootFilterTracer useblame true
+SetTracerOrdering: SpringBootFilterTracer -1000
+
+#Replacing the OOTB Filter Tracing to set the right name in the application context
+TurnOn: SpringBootFilterTracing
+SetFlag: SpringBootFilterTracing
+
+#IdentifyClassAs: org.apache.tomcat.websocket.server.WsFilter SpringBootFilterTracing
+IdentifyClassAs: org.springframework.web.servlet.FrameworkServlet SpringBootFilterTracing
+
+SkipClassForFlag: org.apache.tomcat.websocket.server.WsFilter ServletFilterTracingMethodClass
+SkipClassForFlag: org.apache.tomcat.websocket.server.WsFilter ServletFilterTracingClass
+SkipClassForFlag: org.apache.tomcat.websocket.server.WsFilter ServletFilterTracing
+
+TurnOff: HTTPServletTracing
+
+SkipClassForFlag: org.springframework.web.servlet.FrameworkServlet HTTPServletTracing
+
+TraceOneMethodWithParametersIfFlagged: SpringBootFilterTracing doFilter SpringBootFilterTracer "Servlet Filter"
+TraceOneMethodWithParametersIfFlagged: SpringBootFilterTracing service SpringBootFilterTracer "Servlet"
+TraceOneMethodWithParametersIfFlagged: SpringBootFilterTracing service ServletServerCorrelationTracer "ServletCorrelation"
+
+#Tracer for the constructor on Spring Boot Application to set the SpringBoot application in
+SetTracerClassMapping: SpringBootApplicationTracer com.wily.field.spring.boot.SpringApplicationCreationTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+
+InstrumentBootstrapClass: org.springframework.boot.SpringApplication true
+SetFlag: SpringBootApplicationTracing
+TurnOn: SpringBootApplicationTracing
+IdentifyClassAs: org.springframework.boot.SpringApplication SpringBootApplicationTracing
+TraceOneMethodWithParametersIfFlagged: SpringBootApplicationTracing <init> SpringBootApplicationTracer "Not used"
+TraceOneMethodWithParametersIfFlagged: SpringBootApplicationTracing <init> PerIntervalCounterDifferentInstances "Spring Supportability|Spring Boot Application:initialization"
+
+SetTracerClassMapping: SpringBootPropertyTracer com.wily.field.spring.boot.SpringBootPropertyTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetFlag: SpringBootPropertyTracing
+TurnOn: SpringBootPropertyTracing
+IdentifyClassAs: org.springframework.boot.SpringApplication SpringBootPropertyTracing
+TraceOneMethodWithParametersIfFlagged: SpringBootPropertyTracing printBanner SpringBootPropertyTracer "Not used"
+
+#AMQP Message Tracing
+#Queue Tracer
+SetTracerClassMapping: AMQPQueueFrontendTracer com.wily.field.spring.amqp.AMQPQueueFrontendTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: AMQPQueueFrontendTracer newmode true
+SetTracerParameter: AMQPQueueFrontendTracer useblame true
+SetTracerParameter: AMQPQueueFrontendTracer nameformatter com.wily.field.spring.amqp.AMQPMessageInboundNameFormatter
+SetTracerOrdering: AMQPQueueFrontendTracer 100
+
+SetTracerClassMapping: AMQPInboundCorrelationTracer com.wily.field.spring.amqp.AMQPInboundCorrelationTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: AMQPInboundCorrelationTracer newmode true
+SetTracerParameter: AMQPInboundCorrelationTracer useblame true
+SetTracerOrdering: AMQPInboundCorrelationTracer 200
+
+SetTracerClassMapping: AMQPOutboundBackendTracer com.wily.introscope.agent.trace.hc2.BackendTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: AMQPOutboundBackendTracer newmode true
+SetTracerParameter: AMQPOutboundBackendTracer useblame true
+SetTracerParameter: AMQPOutboundBackendTracer nameformatter com.wily.field.spring.amqp.AMQPMessageOutboundNameFormatter
+SetTracerOrdering: AMQPOutboundBackendTracer 100
+
+SetTracerClassMapping: QueueOutboundCorrelationTracer com.wily.field.spring.amqp.AMQPOutboundCorrelationTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerOrdering: QueueOutboundCorrelationTracer 200
+
+#Inbound Queue tracing
+SetFlag: AMQPMessageListenerTracing
+TurnOn: AMQPMessageListenerTracing
+IdentifyDeepInheritedAs:  org.springframework.amqp.core.MessageListener AMQPMessageListenerTracing
+IdentifyInheritedAs: org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener AMQPMessageListenerTracing
+IdentifyInheritedAs: org.springframework.amqp.rabbit.core.RabbitTemplate AMQPMessageListenerTracing
+IdentifyClassAs: org.springframework.amqp.rabbit.core.RabbitTemplate AMQPMessageListenerTracing
+IdentifyClassAs: org.springframework.amqp.rabbit.listener.adapter.AbstractAdaptableMessageListener AMQPMessageListenerTracing
+TraceOneMethodWithParametersIfFlagged: AMQPMessageListenerTracing onMessage AMQPQueueFrontendTracer "Messaging Services (onMessage)|Queue|{queue}"
+TraceOneMethodWithParametersIfFlagged: AMQPMessageListenerTracing onMessage AMQPInboundCorrelationTracer "Not used"
+
+#Outbound AMQP tracing
+SetFlag: RabbitTemplateTracing
+TurnOn: RabbitTemplateTracing
+IdentifyInheritedAs: org.springframework.amqp.rabbit.core.RabbitTemplate RabbitTemplateTracing
+IdentifyClassAs: org.springframework.amqp.rabbit.core.RabbitTemplate RabbitTemplateTracing
+TraceOneMethodWithParametersIfFlagged: RabbitTemplateTracing doSend AMQPOutboundBackendTracer "Backends|Messaging Services (outgoing)|Queue|{queue}"
+TraceOneMethodWithParametersIfFlagged: RabbitTemplateTracing doSend QueueOutboundCorrelationTracer "Not-used"
+
+#Async Task Execution
+SetTracerClassMapping: TaskExecuterBackendTracer com.wily.field.spring.async.TaskExecutorBackendTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+
+SetTracerClassMapping: TaskExecuterCorrelationTracer com.wily.field.spring.async.TaskExecuterInvocationTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+
+SetTracerClassMapping: ThreadRunBlamePointTracer com.wily.field.spring.async.RunBlamePointTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: ThreadRunBlamePointTracer nameformatter com.wily.field.spring.async.RunNameFormatter
+
+SetFlag: TaskSchedulingTracing
+TurnOn: TaskSchedulingTracing
+IdentifyInheritedAs: org.springframework.core.task.TaskExecutor TaskSchedulingTracing
+TraceOneMethodWithParametersIfFlagged: TaskSchedulingTracing execute TaskExecuterBackendTracer "Backends|Async Task Execution|{classname}"
+TraceOneMethodWithParametersIfFlagged: TaskSchedulingTracing execute TaskExecuterCorrelationTracer "Not used"
+
+InstrumentBootstrapClass: java.lang.Runnable true
+InstrumentBootstrapClass: java.util.concurrent.ThreadPoolExecutor true
+InstrumentBootstrapClass: java.util.concurrent.FutureTask true
+InstrumentBootstrapClass: org.springframework.core.task.TaskExecutor true
+InstrumentBootstrapClass: java.util.concurrent.CompletableFuture$AsyncSupply true
+
+SetFlag: TaskRunTracing
+TurnOn: TaskRunTracing
+IdentifyDeepInheritedAs: java.lang.Runnable TaskRunTracing
+IdentifyClassAs: java.util.concurrent.CompletableFuture$AsyncSupply TaskRunTracing
+TraceOneMethodWithParametersIfFlagged: TaskRunTracing run ThreadRunBlamePointTracer "Apps|{appname}-Async|Class|{classname}"
+
+SetTracerClassMapping: SpringApplicationBlamePointTracer com.wily.introscope.agent.trace.hc2.BlamePointTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: SpringApplicationBlamePointTracer nameformatter com.wily.field.spring.async.SpringApplicationNameFormatter
+SetTracerParameter: SpringApplicationBlamePointTracer newmode true
+SetTracerParameter: SpringApplicationBlamePointTracer useblame true
+
+SetFlag: SpringApplicationTracing
+TurnOn: SpringApplicationTracing
+IdentifyAnnotatedClassAs: org.springframework.boot.autoconfigure.SpringBootApplication SpringApplicationTracing
+TraceOneMethodWithParametersIfFlagged: SpringApplicationTracing run SpringApplicationBlamePointTracer "Spring-Boot|Spring Application|{class}"
+
+#Async Thread Correlation
+
+#AsyncTaskExecutor
+SetTracerClassMapping: SimpleAsyncTaskExecuterCorrelationTracer com.wily.field.spring.async.TaskExecuterInvocationTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+
+SetFlag: SimpleAsyncTaskExecutorTracing
+TurnOn: SimpleAsyncTaskExecutorTracing
+IdentifyClassAs: org.springframework.core.task.SimpleAsyncTaskExecutor SimpleAsyncTaskExecutorTracing
+TraceOneMethodWithParametersIfFlagged: SimpleAsyncTaskExecutorTracing doExecute SimpleAsyncTaskExecuterCorrelationTracer "Correlation"
+TraceOneMethodWithParametersIfFlagged: SimpleAsyncTaskExecutorTracing doExecute TaskExecuterBackendTracer "Backends|Async Task Execution|{classname}"
+
+#Task Executor
+IdentifyDeepInheritedAs: java.util.concurrent.AbstractExecutorService SimpleAsyncTaskExecutorTracing
+TraceOneMethodWithParametersIfFlagged: SimpleAsyncTaskExecutorTracing execute SimpleAsyncTaskExecuterCorrelationTracer "Correlation"
+TraceOneMethodWithParametersIfFlagged: SimpleAsyncTaskExecutorTracing execute TaskExecuterBackendTracer "Backends|Async Task Execution|{classname}"
+
+#Repository Tracing
+SetTracerClassMapping: RepositoryTracer com.wily.introscope.agent.trace.hc2.BackendTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: RepositoryTracer newmode true
+SetTracerParameter: RepositoryTracer useblame true
+SetTracerParameter: RepositoryTracer nameformatter com.wily.field.spring.repository.RepositoryAccessNameFormatter
+
+SetTracerClassMapping: RepositorySummaryTracer com.wily.introscope.agent.trace.hc2.BlamePointTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: RepositorySummaryTracer newmode true
+SetTracerParameter: RepositorySummaryTracer useblame true
+SetTracerParameter: RepositorySummaryTracer nameformatter com.wily.field.spring.repository.RepositoryAccessNameFormatter
+SetTracerOrdering: RepositorySummaryTracer -100
+
+SetFlag: CommandProtocolTracing
+#TurnOn: CommandProtocolTracing
+IdentifyDeepInheritedAs: com.mongodb.connection.Protocol CommandProtocolTracing
+TraceOneMethodWithParametersIfFlagged: CommandProtocolTracing execute RepositoryTracer "Backends|{database}|{namespace}|{command}"
+TraceOneMethodWithParametersIfFlagged: CommandProtocolTracing execute RepositorySummaryTracer "Backends|{database}"
+
+#JSON Position
+#1 = Parameter I
+SetTracerClassMapping: MongoOperationsBackendTracer com.wily.field.spring.repository.MongoDBContentTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: MongoOperationsBackendTracer newmode true
+SetTracerParameter: MongoOperationsBackendTracer useblame true
+SetTracerParameter: MongoOperationsBackendTracer nameformatter com.wily.field.spring.repository.MongoOperationsFormatter
+SetTracerParameter: MongoOperationsBackendTracer jsonposition Param1
+SetTracerParameter: MongoOperationsBackendTracer collectionPosition 1
+SetTracerParameter: MongoOperationsBackendTracer objectPosition 0
+SetTracerOrdering: MongoOperationsBackendTracer -100
+
+SetTracerClassMapping: MongoOperationsBackendSummaryTracer com.wily.field.spring.repository.MongoDBContentTracer com.wily.introscope.probebuilder.validate.ResourceNameValidator
+SetTracerParameter: MongoOperationsBackendSummaryTracer newmode true
+SetTracerParameter: MongoOperationsBackendSummaryTracer useblame true
+SetTracerParameter: MongoOperationsBackendSummaryTracer nameformatter com.wily.field.spring.repository.MongoOperationsFormatter
+SetTracerParameter: MongoOperationsBackendSummaryTracer jsonposition Param1
+SetTracerParameter: MongoOperationsBackendSummaryTracer collectionPosition 1
+SetTracerParameter: MongoOperationsBackendSummaryTracer objectPosition 0
+SetTracerOrdering: MongoOperationsBackendSummaryTracer 100
+
+
+SetFlag: MongoOperationsTracing
+TurnOn: MongoOperationsTracing
+IdentifyInheritedAs: org.springframework.data.mongodb.core.MongoOperations MongoOperationsTracing
+#"Backends|{database}|{namespace}|{command}"
+
+#Detailed Tracer
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeCommand MongoOperationsBackendTracer "Backends|{database}|executeCommand"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeQuery MongoOperationsBackendTracer "Backends|{database}|query|{1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing save(Ljava/lang/Object;)V; MongoOperationsBackendTracer "Backends|{database}|save|{object-class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing save(Ljava/lang/Object;Ljava/lang/String;)V; MongoOperationsBackendTracer "Backends|{database}|save|{object-class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing execute MongoOperationsBackendTracer "Backends|{database}|execute command"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeQuery(Ljava/lang/Object;Ljava/lang/String;)V; MongoOperationsBackendTracer "Backends|{database}|executeQuery|{1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing stream MongoOperationsBackendTracer "Backends|{database}|stream|{class-1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/String;)Lcom/mongodb/DBCollection; MongoOperationsBackendTracer "Backends|{database}|create collection|{0}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/Class;)Lcom/mongodb/DBCollection; MongoOperationsBackendTracer "Backends|{database}|create collection|{class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/Class;Lorg/springframework/data/mongodb/core/CollectionOptions;)Lcom/mongodb/DBCollection; MongoOperationsBackendTracer "Backends|{database}|create collection|{class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing collectionExists MongoOperationsBackendTracer "Backends|{database}|collection exists|{0}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing dropCollection MongoOperationsBackendTracer "Backends|{database}|drop collection|{0}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAll MongoOperationsBackendTracer "Backends|{database}|findAll|{class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing group MongoOperationsBackendTracer "Backends|{database}|group operation"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing aggregate MongoOperationsBackendTracer "Backends|{database}|aggregate operation"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing geoNear MongoOperationsBackendTracer "Backends|{database}|geo near query"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findOne MongoOperationsBackendTracer "Backends|{database}|findOne|{class-1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing exists MongoOperationsBackendTracer "Backends|{database}|exists|{1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing find MongoOperationsBackendTracer "Backends|{database}|find|{class-1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findById MongoOperationsBackendTracer "Backends|{database}|findById|{class-1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAndModify MongoOperationsBackendTracer "Backends|{database}|findAndModify|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAndRemove MongoOperationsBackendTracer "Backends|{database}|findAndRemove|{1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing count MongoOperationsBackendTracer "Backends|{database}|count|{1}|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing insert MongoOperationsBackendTracer "Backends|{database}|insert|{object-class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing insertAll MongoOperationsBackendTracer "Backends|{database}|insertAll|{0}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing updateFirst MongoOperationsBackendTracer "Backends|{database}|updateFirst|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing updateMulti MongoOperationsBackendTracer "Backends|{database}|updateMulti|{query-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Ljava/lang/Object;)Lcom/mongodb/WriteResult; MongoOperationsBackendTracer "Backends|{database}|remove|{object-class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Ljava/lang/Object;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendTracer "Backends|{database}|remove|{object-class-zero}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;)Lcom/mongodb/WriteResult; MongoOperationsBackendTracer "Backends|{database}|remove|{class-1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendTracer "Backends|{database}|remove|{class-1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendTracer "Backends|{database}|remove|{1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/String;)Ljava/util/List; MongoOperationsBackendTracer "Backends|{database}|findAllAndRemove|{1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;)Ljava/util/List; MongoOperationsBackendTracer "Backends|{database}|findAllAndRemove|{class-1}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/List; MongoOperationsBackendTracer "Backends|{database}|findAllAndRemove|{class-1}"
+
+#Backend Summary Tracer
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeCommand MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeQuery MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing save(Ljava/lang/Object;)V; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing save(Ljava/lang/Object;Ljava/lang/String;)V; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing execute MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing executeQuery(Ljava/lang/Object;Ljava/lang/String;)V; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing stream MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/String;)Lcom/mongodb/DBCollection; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/Class;)Lcom/mongodb/DBCollection; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing createCollection(Ljava/lang/Class;Lorg/springframework/data/mongodb/core/CollectionOptions;)Lcom/mongodb/DBCollection; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing collectionExists MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing dropCollection MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAll MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing group MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing aggregate MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing geoNear MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findOne MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing exists MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing find MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findById MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAndModify MongoOperationsBackendSummaryTracer "Backends|{database}}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAndRemove MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing count MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing insert MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing insertAll MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing updateFirst MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing updateMulti MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Ljava/lang/Object;)Lcom/mongodb/WriteResult; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Ljava/lang/Object;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;)Lcom/mongodb/WriteResult; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing remove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/String;)Lcom/mongodb/WriteResult; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/String;)Ljava/util/List; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;)Ljava/util/List; MongoOperationsBackendSummaryTracer "Backends|{database}"
+TraceOneMethodWithParametersIfFlagged: MongoOperationsTracing findAllAndRemove(Lorg/springframework/data/mongodb/core/query/Query;Ljava/lang/Class;Ljava/lang/String;)Ljava/util/List; MongoOperationsBackendSummaryTracer "Backends|{database}"
+
