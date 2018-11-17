@@ -1,0 +1,343 @@
+##############################################################################
+#
+# CA 終端使用者授權合約檔案
+#
+##############################################################################
+# 
+# 所安裝 CA 軟體產品與相關文件以及 SDK (定義如下) 之 CA 使用者授權合約 (以下稱為「合約」) 已包含在產品 (以下稱為「產品」) 中。
+# 
+# 安裝及使用產品前，請詳細閱讀下列與使用產品相關的條款與條件。台端在本合約將被稱為「貴用戶」或「使用人」。
+# 
+# 於以下鍵入 "accept" (接受) 後，表示貴用戶已同意以下事項： 
+# 
+# (I) 貴用戶已成年，具完全法定能力，可適當約束自我及雇主之行為以遵循本合約之條款； 
+# (II) 貴用戶本身及/或以貴用戶雇主之授權代表身分，受本合約之約束。
+# 
+# 於以下鍵入 "reject" (拒絕) 後，安裝程序將終止。
+# 
+# 1.  CA, Inc. 或以下第 15 條之後所個別列出認可販售本產品之國家地區的 CA 實體 (以下稱為「CA」) 為使用人提供一 (1) 套產品供其依照以下條件使用：任何訂購單 (定義如下) 或產品包裝盒中的 CD 外盒上授權使用限制 (以下稱為「授權使用限制」) 所載明的 (a) 數量和 (b) CA 用來量測產品使用情形 (包括但不限於 MIPS、CPU、階層、伺服器或使用者) 的發佈準則。CA 以限制、非獨佔、不可轉讓為原則，將產品授權給使用人在「期限」內僅用於內部業務用途，另外也依據以下其他條款與條件：(a) 任何經使用人與 CA 附屬公司簽署或簽約之 CA 訂購單或註冊表格；或 (b) 任何由 CA 視需要提供給使用人之授權程式憑證，參照並納入本合約 (以下稱為「訂購單」) 的條款。
+# 
+# 2.  如果產品為目前尚未正式發行之 alpha 版或試用版程式 (在下文中稱為「試用版程式」或「試用版軟體」)，CA 不保證正式版本與試用版程式完全相同，亦不保證貴用戶不須重新安裝正式版本。使用人同意若註冊支援服務或經 CA 要求而註冊該服務，使用人應提供 CA 關於使用人對產品操作經驗之特定資訊。使用人同意並承認下列事項：(a) 產品試用版僅適用於測試，不做為任何生產用途，經 CA 書面同意者不在此限；以及 (b) 產品試用版未經測試或偵錯，純粹做為實驗用途，其文件僅供參考，且多有不完整之處。使用人同意 CA 不保證產品試用版之完整性、正確性或使用人之使用或操作。試用版產品係以「原有形式」提供，不提供任何明示或默示之承諾或擔保，其包含但不限於對於產品之所有權或未侵權之任何承諾或擔保。如果使用人同時為試用版產品的測試人員 (依照使用人在取得試用版產品前於註冊程序中同意之試用版測試或發行前版本測試合約 (以下稱為「試用版測試合約」) 所定義)，使用人同意本授權合約之條款為「試用版測試合約」之附加內容，而非使取代該合約。
+# 
+# 3.  若產品獲授權為試用或評估之用，使用人同意產品僅用於評估，並在 30 天 (除非另外註明期限) 的評估期 (以下稱為「試用期」) 中確實遵守第 1 條之使用限制。試用期結束後，使用人之產品使用權自動失效，使用人同意解除安裝產品，並將全部或部份產品歸還 CA，或以書面方式向 CA 證明已從使用人電腦資料庫及/或儲存裝置中刪除與銷毀全部或部份產品。若使用人希望在試用期滿後繼續延伸其產品使用權，使用人可與 CA 或 CA 附屬公司聯繫並支付費用以取得產品之授權。使用人在試用期間僅以「原有形式」使用產品，不具任何瑕疵責任擔保，CA 亦不負責全部瑕疵責任擔保，包括但不限於適售性之默示擔保及特定用途之適用性，亦不負責本合約他處明示之任何瑕疵責任擔保。
+# 
+# 4.  如果產品包含軟體開發套件 (以下稱為「SDK」)，本段之條款與條件僅適用於 SDK 的使用層面。SDK 可能包括軟體、API 和相關文件。SDK 僅供使用人內部使用，以開發整合產品與協力廠商軟硬體之軟體，或開發與產品共同使用之軟體 (例如代理程式)。使用人對 SDK 之使用僅限於幫助產品的內部使用。使用人不具有任何關於產品之散發權利。除了下述第 8 條中提及之使用限制之外，使用人不得複製、揭露、銷售，或將 SDK 或文件，或任何含有 SDK 可執行版之應用程式散佈給第三方，亦不得置於網際網路，或在超過授權使用限制所規定的範圍外，使用上述可執行程式。本條款與本合約中其他條款有所衝突時，以本條款中關於 SDK 之使用方面之條款為優先採用。
+# 
+# 在適用法律的最大許可下，即使與此處條文內容有任何違背之處， SDK 係以「原有形式」加以提供與授權，不具瑕疵擔保責任。
+# 
+# 5.  支付訂購單中所載明或使用人與 CA 或任何 CA 附屬公司授權經銷商之間所協議之費用，可使使用人具有在訂購單載明之期限 (以下稱為「期限」) 內使用產品之權利，其中可能包括在訂購單所示期限內接受維護服務之權利。全部費用均須依訂購單中的指定支付，或若未指定，則應於 CA 發票日起淨三十 (30) 天內支付。使用人將可安裝產品的每一個新版本。最初期限結束後，使用人須支付訂購單載明之費用，始得繼續使用產品及/或維護服務。如果貴用戶是從 CA 授權經銷商取得產品授權，則本合約中管理付款、定價和折扣的條款將不適用，因為此等條款是貴用戶與所選 CA 經銷商之間的協定。針對可能出現在使用人採購單 (包括但不限於預印條款)，或出現為使用人與 CA 授權經銷商訂單的一部份，但與本合約之條款與條件相牴觸或有所差異的任何條款，將不適用於本產品且應視為無效。  關於任何內容需要持續更新的產品 (例如簽名檔和安全性更新)，使用人可在授權生效日期起算一 (1) 年內享有此類內容更新，不受上述規定之限制。
+# 
+# 6.  如係由 CA 或 CA 附屬公司提供維護，則需依據所簽訂之訂購單所示，每年重新續約。全部費用均不含稅。使用人同意在收到 CA 或 CA 附屬公司 (若適用) 發出之發票後，支付政府徵收或公家機關代收之任何關稅或稅金，包含但不限於聯邦稅、州稅與地方稅、營業稅、使用稅、加值稅及個人財產稅 (不包含 CA 應付之加盟及所得稅)。上述關稅或稅金之免稅聲明須提供 CA 相關文件證明。使用人逾期未償付之發票，每月衍生之利息至少 1.5%，至多則依照聯邦法定利率。
+# 
+# 7.  使用人可以在訂購單中指定的授權地區安裝與部署本產品，數量上限依授權使用限制所規定。使用人可以同意其授權使用者在任何地方針對使用人及其附屬公司的內部業務用途存取本產品，前提是使用人在此明確同意授權使用者的違反行為應視為是使用人的違反行為和責任。經事先書面通知之後，使用人得將本產品的使用地點改到訂購單中指定之授權地區內的新使用人地點。在這份文件中，「授權使用者」是指使用人、其附屬公司和所屬員工，以及所應遵守的條款與條件的限制程度不下於本文的條款與條件，並代表使用人而非第三方行為的獨立承包商 (但任何外包商、設備管理供應商、委外服務供應商或應用程式服務供應商除外)；使用人相關「附屬公司」是指使用人直接或間接控制的任何法律實體；而「控制」是指擁有或控制大於 50% 實體股份，或依法律效力或合約 (或相等實力) 控制此等實體的董事會。若使用人欲在上述限制之外使用產品，須告知 CA 或 CA 附屬公司，使用人採購本產品的來源並開立發票及支付延伸使用之費用。
+# 
+# 8.  產品 (包括任何可能提供給使用人之來源或目的碼) 以及文件、外觀、結構和組織，均為 CA 及/或其授權人之專利財產，並可能受到著作權、專利、註冊商標、商標、商業機密及/或其他法律之保護。SDK 產品所有權或其任何複製、修改、轉譯、部分複製、組譯、衍生物件或合併之程式歸 CA 及/或其授權人所有。 使用人同意 CA 在無需獲得使用人同意的情況下，使用由其所提供且與本產品相關的任何意見反應，作為任何 CA 商業用途使用，包括以此等意見反應為依據的衍生作品重製與準備，以及此等衍生作品的散佈。產品之相關使用權不得替換為其它任何 CA 產品。產品僅做為單一產品進行授權。其組件不得分開單獨使用。貴用戶與其授權使用者須將產品及本授權之條款視為極機密，極力避免產品遭受未經授權的公開和使用。貴用戶不得 (i) 揭露、反組譯或分解產品，亦不得進行產品之還原工程，但若準據法律明文禁止上述限制者，則不在此限；(ii) 建立任何產品之衍生物件；(iii) 將產品用於提供設備管理、外包、服務機構、裝載服務、雲端服務、隨選服務，或在使用人沒有授權此等目的之 CA 授權的情況下，操作或將本產品用於第三方以牟利的類似活動；或 (iv) 准許任何第三方使用本產品，已由 CA 書面授權者除外。使用人未獲 CA 書面同意前，不得向任何第三方揭露產品之任何基準測試結果。使用人不得轉送、讓渡、出租、使用、複製或修改全部或部份產品，或在未獲 CA 書面同意下准許他人對產品進行以上各項行為，但若準據法律明文禁止為上述限制者，則不在此限。使用人不得移除 CA 或其授權人之任何所有權標記。使用人可以針對災難復原「冷待命」、備份及封存等目的，製作合理數量的本產品副本；前提是此類副本的使用僅限於測試使用人的災難復原程序和效率，且必要時僅限實際災難發生之後，使用人無法操作本產品的任何合理期間。若此授權因任何原因而終止，使用人應向 CA 提出書面證明，證明全部或部份產品已從全部電腦及儲存裝置中刪除，並已歸還 CA 或銷毀，將不再使用。使用人同意本產品受歐洲和美國法律約束，包括「出口管理規則 (Export Administration Regulations)」(15 CFR 730-774)，並同意遵守所有適用之進出口法律和規定。使用人同意不會在違反美國法律的情況下出口、再出口或傳輸本產品，或將本產品用於任何化學、生化或核子武器或飛彈應用等相關目的，若使用人瞭解或有原因知道計劃或有可能將本產品用於此等目的，也不會傳輸或轉售本產品。本產品及相關文件係完全由私人開發完成，並屬於美國聯邦採購法規 (Federal Acquisition Regulation，FAR) 分篇 2.101 「定義」中所定義的「商業產品」和「商業電腦軟體」。本產品得不依資訊公開法 (FOIA) 5 U.S.C. 之規定向大眾提供。§552(b) 在該法令的一或多項豁免下 (或類似的美國州法，若適用)。任何先前提供給貴用戶的產品可能無法重複提供。在 CA 收到可接受訂單之後，任何先前未提供給使用人的產品將提供給使用人或其選定的經銷商。本產品應以電子交付形式 (“ESD”) 交貨，或如果 CA 或 CA 附屬公司分別要求從 CA 或此等 CA 附屬公司的出貨點，以有形媒體、CPT (如 INCOTERMS 2010 中所定義) 的形式交貨。使用人採購本產品的 CA 或 CA 附屬公司同意負責所有的關稅和結關，且任何 CA 硬體 (若包含) 的所有權會在 CA 或此等 CA 附屬公司的出貨地點，於交貨時間點轉讓給貨運業者。若是採用電子交付，將不會提供有形的個人所有物。此類電子交付形式可能無法自動提供適用稅額或使用稅之免除。認定為「泛型」或「GA」的任何作業系統表示 CA 按照 CA 目前發佈的規格向大眾提供的本產品，適用於此等作業系統。在最早的實體運輸點或電子形式交貨時授權碼/使用程式碼的傳遞即視為完成交貨。CA Inc. 是本產品的製造商。CA 保留在通知貴用戶後遠端或駐站稽核使用人和 (或) 其附屬公司設施的權利，以查證使用人及其授權使用者是否遵循本合約條款。CA 同意應在貴用戶辦公室的正常工作時間內進行此等稽核，且 CA 在進行此等稽核時，應盡力避免以不合理的方式干擾貴用戶的活動，和 (或) 視需要使用受保密條款約束的獨立第三方進行稽核。本合約應遵守美國法律，並依據美國法律作出解釋，不必顧及其選擇的法律規定，且任何與本合約內容或相關的行動都必須以紐約蘇福克郡的聯邦上訴法院的專屬管轄權為準。
+# 
+# 9. CA 保證簽署本合約，並保證賠償或選擇解決 CA 未經授權、或使用人在經授權情況下使用產品，但侵害任何美國專利或交貨時授權使用人使用本產品之所在司法管轄區著作權的任何第三方的主張。CA 亦保證自產品交付使用人起九十 (90) 天內，其分散式產品會符合其說明文件中所列示之發佈規格運作，前提是 CA 的唯一責任為盡力使產品與業界標準達成一致，以避免任何缺失。在收到使用人針對上述擔保之書面違約通知後合理期限內，若 CA 無法使產品之操作 (a) 符合第三方智慧財產權或 (b) 確實符合 CA 之書面規格，CA 得以終止此授權，並根據授權費用及 (或) 已支付的支援與維護費用，提供或安排按比例退費給使用人或其 CA 授權經銷商。若有此等終止情形，按比例退費應根據 (i) 適用訂購單期限內剩餘的月份數，或 (ii) 如果本產品是以永久授權的方式進行授權，使用 (僅限用於退費計算用途) 三 (3) 年的分期償還計畫表進行計算。本條文中所列示的保固內容並不適用於本產品的測試版、試用版、評估或展示版本，或是軟體開發套件。CA 針對下列情況不具賠償或補償保固聲明的責任：(i) 如果侵權或保固聲明的主張是因為修改產品所致，CA 所做的修改除外，(ii) 如果未遵守 CA 的規格、相關說明文件及指導方針使用本產品，(iii) 如果主張的侵權或保固聲明可因使用 CA 發佈的更新或修補程式而避免或消除，(iv) 如果主張的侵權或保固聲明是因為結合使用本產品與任何第三方產品所致，或 (v) 如果尚未支付應付的產品相關費用，或使用人違反本合約。此處所提及的賠償將不適用，且 CA 不負與 CA 所生產的任何產品在使用人明確指導下有關的責任。上述條款說明 CA 有關侵權聲明的所有責任和義務，以及針對任何實際或主張的侵權或侵佔任何智慧財產權或其他所有權，提供給使用人的專有補救措施。
+# 
+# 10.  除上述規定外，尚須符合下列法律規定： 
+# 
+# (I) CA 不提供任何明示或默示之保證，其包括但不限於適售性之默示保證及任何特定用途之適用性； 
+# (II) 在任何情況下，對貴用戶或其它任何人因使用、操作或修改產品造成之損失，包括時間、金錢、商譽及衍生性損害或間接損害，即使 CA 曾被告知此等損害之可能性，CA 均無須負責。在上述之責任限制與法律牴觸時，CA 之責任僅限於使用人實際支付之授權費用。包括代理商、經銷商或授權零售商在內之第三方，均無權修改上述擔保，或代表 CA 提供其它擔保。CA 不保證本產品將符合使用人的要求，亦不保證該產品之使用不會中斷或完全沒有錯誤。
+# 
+# 11.  使用人在同意 CA 所提出與授權合約相關之政策時，包括產品使用範圍不得超出使用人及使用人所屬子公司產業，始簽署本合約。
+# 
+# 12.  若使用人違反本合約任一條款，或使用人無償付能力，或使用人宣告會被宣告破產或受破產管理人管理，CA 有權據此中斷服務並且/或者立即終止本合約。除 CA 其它所有權利之外，全部應支付或即將支付之費用 (若有的話) 必須立即支付給使用人採購本產品的 CA 或 CA 附屬公司。
+# 
+# 13.  若使用人未支付維護費用，須支付 CA 或個別 CA 附屬公司相當於 150% 的年度維護費用，始得恢復維護服務。
+# 
+# 14.  如果法院認為本合約的任何條款為違法、無效或不可執行，剩餘的其它條款仍保有完全效力與效果。任何違反本合約責任的免除不代表對其它違反本合約責任的免除，免除責任將為無效，除非由免除責任一方之授權代表以書面簽署。關於本合約之任何問題，請洽詢 CA, Inc. 全球法律部，地址為 One CA Plaza, Islandia, NY 11749。
+# 
+# 15.  使用人若在美國以外地區取得產品之授權，須遵循下列使用產品之條款：
+# 
+# 本合約受使用人取得產品授權之所在國家法律管轄，不受第 8 條最後條款限制，但以下情形除外： 
+# 
+# 歐洲、中東和非洲
+# 
+# 1. 在 EMEA，授權人 CA 實體為 CA Europe Sàrl (以下稱為「CA Europe」)。CA Europe Sàrl 是產品授權人，透過 CA Europe Sàrl 授權，經由 EMEA 的當地 CA 子公司或經由 CA 授權經銷商將產品提供給使用人使用。CA 支援與維護 (若有的話) 會由當地 CA 子公司或由 CA 授權經銷商提供。
+# 	
+# 2. EMEA 代表歐洲、中東和非洲。
+# 
+# 3. 第 9 條的第 3 及第 5 個條款僅適用於第三方侵權。 第 9 條第二句已刪除，並以下列條文取代：
+# 「CA Europe 也保證本產品將以符合產品說明文件中所列示之適當規格確實操作，但前提是使用人必須遵守本合約條款。如果 CA Europe 違反此保證，在諮詢使用人的情況下，CA Europe 必須 (i) 執行符合業界標準的適當工作來解決此瑕疵，或 (ii) 以確實遵守說明文件的產品取代原先的產品，作為使用人的補救措施。如果無法在合理期限內解決此瑕疵，或如果此瑕疵的矯正或替換最終失敗，使用人應擁有 (i) 在訂閱授權的情況下，如果符合法律或法令要求，合理降低協定之費用和 (或) 因故立即終止的權利；(ii) 在永久授權的情況下，選擇 (1) 撤銷或降低適用交易文件中協定之費用，及 (2) 針對損害或無效支出補償之索賠權利。損害或無效支出的索賠權利應受下方第 10 條中所載明的責任限制。在永久授權的情況下，此處所提及之保固聲明在交付產品後的九十 (90) 天內會開始計算時效。保證補救措施受限於 (i) CA Europe 能夠適度重現所申訴之錯誤或瑕疵，(ii) 本產品未經修改且遵照說明文件進行使用，且 (iii) 違約並非全是或部份是任何非 CA 的產品或服務所致。上述保證是 CA Europe 自行提供的保證。無論是明示或默示，CA Europe 或其供應商不提供包括產品完全沒有錯誤之其他保證，包括但不限於品質滿意、不侵權或適用性的默示保證，及 (或) 適用於特定目的之保證。如果使用人據此保證條文提出索賠，使用人無權或無資格從任何其他 CA 附屬公司尋求相同保證補救措施。」
+# 
+# 4.第 10 條已刪除，並以下列條文取代：
+# 
+# 「10.1 	因 CA Europe 之重大過失或故意違約，或因 CA Europe 法律代表或 CA Europe 負責其合約義務執行的個人之重大過失或故意違約，而造成死亡或身體傷害或健康受傷及損害，以及發生 Product Liability Act (以下稱為「Produktehaftpflichtgesetz」) 中所列之責任事件時，CA Europe 的責任 (無論責任原因為何) 將不受限制。
+# 10.2 	在些微過失的情況下，如果 CA Europe 違反執行本合約的必要義務，以及違反另一方通常信任的履行義務，則 CA Europe (無論責任原因為何) 必需對此負責。在此情況下，CA Europe 對使用人的責任將限於可預見的損害，以及執行本合約時通常會發生的損害。
+# 10.3 	進一步說明上述 CA Europe 對使用人的責任，針對間接、特殊及衍生性損害 (包括但不限於利益損失、業務損失、機會損失或商譽損失) 方面的責任應限於可預見的損害，以及執行本合約時通常會發生的損害。
+# 10.4 	可預見的損害通常在執行本合約中的授予授權時發生，雙方應同意上述第 10.2 和 10.3 條的定義，將可預見的損害限於使用人採購本產品當時之最初或續約期限的最高已付或欠下的費用。
+# 10.5 在定期和適當資料備份的案例中，資料遺失的責任僅限於典型的復原工作。
+# 10.6 	本合約中所提供的補救措施為雙方的專有補救措施。」
+# 
+# 5.下列條款將附加於本合約：
+# 
+# 「不可抗力因素。除了付款義務和保密相關義務之外，無論本合約有任何相反條文，在採取此類行動或因超出任一方所能控制而引起此類失敗的情況下，包括但不限於戰爭、內亂、天災、罷工或其他勞工停工 (無論是局部或全面)，或任何政府或政府組織 (包括任何法院或法庭) 的任何法律、法令、法規、命令，任一方均不須對任何採取的行動或任何無法成功採取的必要行動負責」。
+# 
+# 「使用人資料。如果使用人將任何個人資料傳至 CA Europe，作為根據任何產品的必要項目，則使用人表示 (i) 其已正式授權將個人資料提供給 CA Europe，且其行為合法並遵守相關法規，(ii) CA Europe 與 CA 公司集團 (每個公司皆為「CA 實體」) 內的任何實體或其轉包商可以處理此等資料，以履行其義務，且 (iii) CA Europe 可就此目的將此等資料提供給任何 CA 實體與其轉包商，並可將此等資料轉移到原始國家地區之外的地方。CA, Inc. 已獲「資料保密」(Safe Harbor) 認證且 CA 實體已承諾遵守相關資料保護/隱私權法規。」
+# 
+# 6. 本合約之構成與強制執行應受瑞士法律 (本合約條文與法律牴觸者除外) 管轄。雙方同意根據本合約所衍生或與其相關的任何行動，應受位於蘇黎世的瑞士法院獨有管轄。本合約不受「聯合國國際貨物銷售合約公約」(United Nations Convention on Contracts for the International Sale of Goods) 之約束。
+# 
+# 7. EMEA 地區關於本合約之任何問題，請洽詢 CA Europe Sàrl 全球法律部，地址為 Building A, Lake Geneva Centre, Route de la Longeraie 9, 1110 Morges, Switzerland。
+# 
+# 阿根廷
+# 授權人 CA 子公司為 CA Argentina S.A。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守阿根廷法律。據此任何爭議由布宜諾斯艾利斯地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA de Argentina S.A 財務部，地址為 Avenida Alicia Moreau de Justo, 400, 2 piso, 1107, Buenos Aires。
+# 
+# 澳洲 
+# 授權人 CA 子公司為 CA (Pacific) Pty.Ltd (ABN 20 001 146 345)。
+# 
+# 下列條款將附加於第 2、3 及 10 條之後：
+# 雖然 CA 指明不擔負任何擔保，但是使用人在 Competition and Consumer Act 2010 與其它州及地方法律之下，可以擁有不得排除但是可能受到限制的特定權利。在法律的完全許可下，CA 排除本合約中所有未明確說明於明示條款的條款，並在適用法律的完全許可下，限制 Competition and Consumer Act 2010 與其它州及地方法律強制的任何條款。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約受進行交易的州或地方法律管轄。
+# 
+# 下列條款將附加於第 10 條：
+# 當 CA 違反 Competition and Consumer Act 2010 或其它州及地方法律默示的條件或擔保時，CA 的責任受到限制。就貨物而言，CA 可決定修復或更換貨物，或者支付貨物修復或更換之費用；就服務而言，CA 可決定再次提供服務或是支付重新提供服務之費用。在條件或擔保係關於關貨物銷售權利、秘密擁有或確實所有權時，或者如果 CA 提供的貨物屬於個人、國內或家用或消費等普遍取得的類型，則本條的任何限制不適用。
+# 
+# 巴西 
+# 授權人 CA 子公司為 CA Programas de Computador, Participaçðes e Serviços Ltda。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守巴西法律。據此任何爭議由聖保羅市政府法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA Programas de Computador, Participaçðes e Serviços Ltda. 全球法律部，地址為 Avenida das Nações Unidas, 12901 – 6 andar – Torre Norte – São Paulo – SP, 04578-000。
+# 
+# 加拿大 
+# 授權人 CA 子公司為 CA Canada Company。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約受安大略省法律管轄。
+# 
+# 智利 
+# 授權人 CA 子公司為 CA de Chile, S.A。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守智利法律。據此任何爭議由聖地牙哥地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA de Chile, S.A 財務部，地址為 Avenida Providencia 1760, piso 15 – Edificio Palladio, oficina 1501 - 6640709 Providencia - Santiago。
+# 
+# 中國  
+# 授權人 CA 子公司為 CA (China) Co., Ltd.。
+# 
+# 第 6 條第二句已刪除，並以下列條文取代：
+# 全部費用均含加值稅。   
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋均須遵循中華人民共和國之法律，不論其法律條款之選擇為何。據此任何爭議由位於北京之管轄法院仲裁。
+# 
+# 哥倫比亞
+# 授權人 CA 子公司為 CA Software de Colombia S.A。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守哥倫比亞法律。據此任何爭議由波哥大地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA Software de Colombia S.A 財務部，地址為 Edificio  Grupo Santander Central Hispano Torre 2 - Oficina 401 Carrera 7 - Nº 99-53 - Bogotá D.C. - Colombia。
+# 
+# 香港
+# 授權人 CA 子公司為 CA (Hong Kong) Limited，也是其主要營業地點，地址為 Suites 2301 2306, 23rd Floor, Dah Sing Financial Centre, 108 Gloucester Road, Wanchai, Hong Kong。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守香港法律。香港法院獨有仲裁本合約所引起任何爭議之司法管轄權。
+# 
+# 下列條款將附加於第 10 條之後：上述之責任限制與上述之責任上限，並無影響貴用戶依商品銷售法、服務提供 (默示條款) 法，或免除條款控制法所得享有之法定權利，亦不限制或排除任何純因 CA 之過失所導致之死亡或個人傷害責任。
+# 
+# 印度
+# 授權人 CA 子公司為 CA (India) Technologies Private Limited。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約及以下條款之管轄與構成須遵守印度法律，並且孟買法院獨有仲裁本合約所引起任何爭議之司法管轄權。 若產品是以電子形式交付，CA 應該讓該產品能從印度以外國家的伺服器進行下載。
+# 
+# 印尼 (請參閱新加坡)
+# 
+# 日本
+# 授權人 CA 子公司為 CA Japan, Ltd.。
+# 
+# 第 6 條第三句已刪除，並以下列條文取代：
+# 使用人同意在收到 CA 發出之發票後，支付政府徵收或公家機關代收之任何關稅或稅金，不包含 CA 應付之稅金。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋均須遵循日本之法律，不論其法律條款之選擇為何。據此任何爭議最終由位於日本東京之東京地區法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA Japan, Ltd. 全球法律部，地址為 2-7-9, Hirakawa-cho, Chiyoda-ku, Tokyo, 102-0093, Japan。
+# 
+# 韓國
+# 授權人 CA 子公司為 CA Korea Inc., Ltd.。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代： 
+# 本合約之管轄與解釋均須遵循大韓民國之法律，不論其法律條款之選擇為何。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代： 
+# 關於本合約之任何問題，請洽詢 CA Korea Inc., Ltd. 全球法律部，地址為 City Air Tower (18th Fl.), 159-9, Samsung-Dong, Kangnam-Ku, Seoul 135-973 Korea。
+# 
+# 馬來西亞
+# 授權人 CA 子公司為 CA (Malaysia) Sdn. Bhd。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守馬來西亞法律。馬來西亞法院獨有仲裁本合約所引起任何爭議之司法管轄權。
+# 
+# 下列條款將附加於第 10 條：
+# 雖然 CA 指明未擔保任何瑕疵責任，使用人根據 Consumer Protection Act 1999 擁有特定權利，且擔保僅限於適用法律之許可範圍。
+# 
+# 墨西哥 
+# 授權人 CA 子公司為 CA Software de México S.A. de C.V。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守墨西哥法律。據此任何爭議由墨西哥地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA Software de México S.A. de C.V, Av.財務部，地址為 Miguel de Cervantes Saavedra 193, Suite 502, Col.Granada, Mexico City, MX 11500。
+# 
+# 紐西蘭
+# 授權人 CA 子公司為 CA Pacific (NZ) Ltd.。
+# 
+# 即使鑑於第 6 條最後一句，使用人逾期未償付之發票每月衍生利息 1.5%。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守紐西蘭法律。紐西蘭法院獨有仲裁本合約所引起任何爭議之司法管轄權。
+# 
+# 下列條款將附加於第 10 條：
+# 雖然 CA 指明未擔保任何瑕疵責任，使用人根據 Consumer Guarantees Act 1993 或其它不得排除或限制的法律擁有特定權利。如果使用者將貨物與服務使用於 Consumer Guarantees Act 1993 所定義之商業目的，Consumer Guarantees Act 1993 將不適用於 CA 所提供之任何貨物或服務。若產品不使用於 Consumer Guarantees Act 1993 所定義之商業目的，本條之限制受到 Consumer Guarantees Act 1993 限制。
+# 
+# 下列條款將附加於第 12 條：
+# 根據本條之 CA 權利亦適用於任何已通過的決議案，或者針對使用人清算或解散所開始之訴訟程序。
+# 
+# 秘魯
+# 授權人 CA 子公司為 CA de Peru S.A。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守秘魯法律。據此任何爭議由利馬地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 CA de Peru S.A 財務部，地址為 Avenida Paseo de La Republica, 3211, Piso 11, San Isidro, Lima 27, Peru。
+# 
+# 菲律賓
+# 授權人 CA 子公司為 Philippine Computer Associates International, Inc.。
+# 
+# 第 8 條前八句已刪除，並以下列條文取代：
+# 產品所有權及全部修改歸 CA 所有。產品為商業機密，且為 CA 或其授權人之專利財產。使用人同意 CA 在無需獲得使用人同意的情況下，使用由其所提供且與本產品相關的任何意見反應，作為任何 CA 商業用途使用，包括以此等意見反應為依據的衍生作品重製與準備，以及此等衍生作品的散佈。產品之相關使用權不得替換為其它任何 CA 產品。使用人與其雇員須將產品及本合約之條款視為極機密。在適用法律的最大許可下，使用人不得揭露、反組譯或分解，亦不得進行產品之還原工程。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守菲律賓法律。馬卡迪市法院獨有仲裁本合約所引起任何爭議之司法管轄權。   
+# 
+# 第 12 條已刪除，並以下列條文取代：
+# 若使用人違反本合約任一條款，或使用人無償付能力，或使用人宣告會被宣告破產或受破產管理人管理，CA 有權據此中斷服務並且/或者在告知時立即終止本合約。 除 CA 其它所有權之外，全部應支付或即將支付之費用必須立即支付給 CA。
+# 
+# 新加坡 
+# 授權人 CA 子公司為 CA (Singapore) Pte. Ltd.。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守新加坡法律。新加坡法院獨有仲裁本合約所引起任何爭議之司法管轄權。
+# 
+# 下列條款將附加於第 9 條之後：
+# 在適用法律的完全許可下，CA 放棄全部品質滿意與特定用途之適用性的全部默示條件與擔保。
+# 
+# 台灣
+# 授權人 CA 子公司為 CA (Taiwan) Limited，其登記辦公室位於 105 台灣省台北市敦化北路 167 號 17 樓 B 座。
+# 
+# 第 6 條第二句已刪除，並以下列條文取代：
+# 全部費用均不含加值稅。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋均須遵循台灣之法律，不論其法律條款選擇為何。據此任何爭議由台北地方法院仲裁。
+# 
+# 泰國
+# 授權人 CA 子公司為 CA Sales (Thailand) Co., Ltd.。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守泰國法律。泰國法院獨有仲裁本合約所引起任何爭議之司法管轄權。
+# 
+# 委內瑞拉
+# 授權人 CA 子公司為 Computer Associates (CAI) de Venezuela, CA。
+# 
+# 第 8 條最後一句已刪除，並以下列條文取代：
+# 本合約之管轄與解釋須遵守委內瑞拉法律。據此任何爭議由卡拉卡斯地方法院仲裁。
+# 
+# 第 14 條最後一句已刪除，並以下列條文取代：
+# 關於本合約之任何問題，請洽詢 Computer Associates (CAI) de Venezuela, CA 財務部，地址為 Avenue Francisco de Miranda, Centro Lido, Torre B, pisso 5, officina B-51, El Rosal, Caracas 1060, Venezuela。
+# 
+# 16.  如果產品含有第三方之軟體，且授權人需為此類軟體在本合約中加入特定授權條款與條件時，這些特定條款與條件併入本合約，構成本合約之一部份，請參閱本合約最後部份。
+# 
+# 貴用戶同意其已閱讀並瞭解本授權，並且在以下鍵入 "accept" (接受) 後，表示接受其條款及條件。貴用戶亦同意本授權 (包括參照本合約之任何訂購單及在本合約後方所載明之第三方軟體之相關條款) 構成雙方針對本合約事項之完整協議，並同意本授權將取代貴用戶就本合約事項已取得之任何資訊，但本合約 (不包含下列第三人條款) 得以被授權人與 CA 共同簽署之書面合約取代之，以授與貴用戶使用產品之授權。本合約僅得由雙方授權代表所簽署之書面合約加以修改。  
+# 
+# = = = = =
+# CA Application Performance Management r. 10.7 (the "CA Software") 
+# Third Party Terms
+# 
+# As referenced in the Specific Program Documentation for the CA Software, following is a list of third-party software components and their third party terms required by licensors of various third party components used with the CA Software:
+# 
+# --------------------- 
+# LsaUtility 1.0 
+# --------------------- 
+# This product includes LsaUtiliy software published at The Code Project (http://www.codeproject.com/KB/cs/lsadotnet.aspx). LsaUtility is distributed in accordance with the terms of the following:" 
+# Preamble 
+# This License governs Your use of the Work. This License is intended to allow developers to use the Source Code and Executable Files provided as part of the Work in any application in any form. 
+# The main points subject to the terms of the License are: 
+# Source Code and Executable Files can be used in commercial applications; 
+# Source Code and Executable Files can be redistributed; and 
+# Source Code can be modified to create derivative works. 
+# No claim of suitability, guarantee, or any warranty whatsoever is provided. The software is provided "as-is". 
+# The Article(s) accompanying the Work may not be distributed or republished without the Author's consent 
+# This License is entered between You, the individual or other entity reading or otherwise making use of the Work licensed pursuant to this License and the individual or other entity which offers the Work under the terms of this License ("Author"). 
+# License 
+# THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CODE PROJECT OPEN LICENSE ("LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED. 
+# BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HEREIN, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE AUTHOR GRANTS YOU THE RIGHTS CONTAINED HEREIN IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS. IF YOU DO NOT AGREE TO ACCEPT AND BE BOUND BY THE TERMS OF THIS LICENSE, YOU CANNOT MAKE ANY USE OF THE WORK. 
+# Definitions. 
+# "Articles" means, collectively, all articles written by Author which describes how the Source Code and Executable Files for the Work may be used by a user. 
+# "Author" means the individual or entity that offers the Work under the terms of this License. 
+# "Derivative Work" means a work based upon the Work or upon the Work and other pre-existing works.
+# "Executable Files" refer to the executables, binary files, configuration and any required data files included in the Work. 
+# "Publisher" means the provider of the website, magazine, CD-ROM, DVD or other medium from or by which the Work is obtained by You. 
+# "Source Code" refers to the collection of source code and configuration files used to create the Executable Files. 
+# "Standard Version" refers to such a Work if it has not been modified, or has been modified in accordance with the consent of the Author, such consent being in the full discretion of the Author. 
+# "Work" refers to the collection of files distributed by the Publisher, including the Source Code, Executable Files, binaries, data files, documentation, whitepapers and the Articles. 
+# "You" is you, an individual or entity wishing to use the Work and exercise your rights under this License. 
+# Fair Use/Fair Use Rights. Nothing in this License is intended to reduce, limit, or restrict any rights arising from fair use, fair dealing, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws. 
+# License Grant. Subject to the terms and conditions of this License, the Author hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below: 
+# You may use the standard version of the Source Code or Executable Files in Your own applications. 
+# You may apply bug fixes, portability fixes and other modifications obtained from the Public Domain or from the Author. A Work modified in such a way shall still be considered the standard version and will be subject to this License. 
+# You may otherwise modify Your copy of this Work (excluding the Articles) in any way to create a Derivative Work, provided that You insert a prominent notice in each changed file stating how, when and where You changed that file. 
+# You may distribute the standard version of the Executable Files and Source Code or Derivative Work in aggregate with other (possibly commercial) programs as part of a larger (possibly commercial) software distribution. 
+# The Articles discussing the Work published in any form by the author may not be distributed or republished without the Author's consent. The author retains copyright to any such Articles. You may use the Executable Files and Source Code pursuant to this License but you may not repost or republish or otherwise distribute or make available the Articles, without the prior written consent of the Author. 
+# Any subroutines or modules supplied by You and linked into the Source Code or Executable Files this Work shall not be considered part of this Work and will not be subject to the terms of this License. 
+# Patent License. Subject to the terms and conditions of this License, each Author hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, import, and otherwise transfer the Work. 
+# Restrictions. The license granted in Section 3 above is expressly made subject to and limited by the following restrictions: 
+# You agree not to remove any of the original copyright, patent, trademark, and attribution notices and associated disclaimers that may appear in the Source Code or Executable Files. 
+# You agree not to advertise or in any way imply that this Work is a product of Your own. 
+# The name of the Author may not be used to endorse or promote products derived from the Work without the prior written consent of the Author. 
+# You agree not to sell, lease, or rent any part of the Work. This does not restrict you from including the Work or any part of the Work inside a larger software distribution that itself is being sold. The Work by itself, though, cannot be sold, leased or rented. 
+# You may distribute the Executable Files and Source Code only under the terms of this License, and You must include a copy of, or the Uniform Resource Identifier for, this License with every copy of the Executable Files or Source Code You distribute and ensure that anyone receiving such Executable Files and Source Code agrees that the terms of this License apply to such Executable Files and/or Source Code. You may not offer or impose any terms on the Work that alter or restrict the terms of this License or the recipients' exercise of the rights granted hereunder. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties. You may not distribute the Executable Files or Source Code with any technological measures that control access or use of the Work in a manner inconsistent with the terms of this License. 
+# You agree not to use the Work for illegal, immoral or improper purposes, or on pages containing illegal, immoral or improper material. The Work is subject to applicable export laws. You agree to comply with all such laws and regulations that may apply to the Work after Your receipt of the Work. 
+# Representations, Warranties and Disclaimer. THIS WORK IS PROVIDED "AS IS", "WHERE IS" AND "AS AVAILABLE", WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES OR CONDITIONS OR GUARANTEES. YOU, THE USER, ASSUME ALL RISK IN ITS USE, INCLUDING COPYRIGHT INFRINGEMENT, PATENT INFRINGEMENT, SUITABILITY, ETC. AUTHOR EXPRESSLY DISCLAIMS ALL EXPRESS, IMPLIED OR STATUTORY WARRANTIES OR CONDITIONS, INCLUDING WITHOUT LIMITATION, WARRANTIES OR CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY OR FITNESS FOR A PARTICULAR PURPOSE, OR ANY WARRANTY OF TITLE OR NON-INFRINGEMENT, OR THAT THE WORK (OR ANY PORTION THEREOF) IS CORRECT, USEFUL, BUG-FREE OR FREE OF VIRUSES. YOU MUST PASS THIS DISCLAIMER ON WHENEVER YOU DISTRIBUTE THE WORK OR DERIVATIVE WORKS. 
+# Indemnity. You agree to defend, indemnify and hold harmless the Author and the Publisher from and against any claims, suits, losses, damages, liabilities, costs, and expenses (including reasonable legal or attorneys' fees) resulting from or relating to any use of the Work by You. 
+# Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL THE AUTHOR OR THE PUBLISHER BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK OR OTHERWISE, EVEN IF THE AUTHOR OR THE PUBLISHER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+# Termination. 
+# This License and the rights granted hereunder will terminate automatically upon any breach by You of any term of this License. Individuals or entities who have received Derivative Works from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 6, 7, 8, 9, 10 and 11 will survive any termination of this License. 
+# If You bring a copyright, trademark, patent or any other infringement claim against any contributor over infringements You claim are made by the Work, your License from such contributor to the Work ends automatically. 
+# Subject to the above terms and conditions, this License is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, the Author reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above. 
+# Publisher. The parties hereby confirm that the Publisher shall not, under any circumstances, be responsible for and shall not have any liability in respect of the subject matter of this License. The Publisher makes no warranty whatsoever in connection with the Work and shall not be liable to You or any party on any legal theory for any damages whatsoever, including without limitation any general, special, incidental or consequential damages arising in connection to this license. The Publisher reserves the right to cease making the Work available to You at any time without notice 
+# Miscellaneous 
+# This License shall be governed by the laws of the location of the head office of the Author or if the Author is an individual, the laws of location of the principal place of residence of the Author. 
+# If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this License, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable. 
+# No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent. 
+# This License constitutes the entire agreement between the parties with respect to the Work licensed herein. There are no understandings, agreements or representations with respect to the Work not specified herein. The Author shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Author and You.
+# 
+# 
+# 上次更新時間 2016-05-25
+#  
+# 於以下鍵入 "accept" (接受)，以接受上述之本合約條款及條件，並開始進行安裝程序。
+# 
+# 於以下鍵入 "reject" (拒絕) 以停止安裝程序。
+#  
+# CA-EULA 的有效值組合為：{accept, reject}。
+CA-EULA=reject

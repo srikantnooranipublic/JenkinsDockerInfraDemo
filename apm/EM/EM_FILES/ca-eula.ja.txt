@@ -1,0 +1,341 @@
+##############################################################################
+#
+# CA エンドユーザー使用許諾契約ファイル
+#
+##############################################################################
+# 
+# インストールするCAソフトウェア製品、および当該製品に含まれる関連ドキュメント、および以下に定義されるSDK（以下、併せて「本製品」と表記します）用の CA エンド ユーザ ライセンス契約（以下、「本契約」または「ライセンス契約」と表記します）。
+# 
+# 本製品をインストールして使用する前に、本製品の使用に関する以下の契約条件をよくお読みください。本使用条件では、お客様は「ライセンス契約者」と表記されます。
+# 
+# 最終行に「accept」と入力することで、以下のことを承認したことになります。 
+# 
+# （I） 成人であり、完全な法的能力を持ち、ライセンス契約者本人およびその雇用主（該当する場合）を本契約に拘束する権限があることを表明し、 
+# （II） ライセンス契約者本人、またはライセンス契約者の雇用者から権限を委任された代表者（該当する場合）、あるいはその両者が本使用条件を遵守することに同意したものとみなされます。
+# 
+# 最終行に「reject」と入力することで、インストールが停止します。
+# 
+# 1.  CA, Inc.または以下の第15項以降に本製品が供与される国において個別に特定されるCAグループ企業（以下、「CA」と表記します）は、ライセンス契約者に対して本製品を1部供与します。本製品1部は、認定された使用制限（以下、「認定使用制限」と表記します）に定められた（a）制限数および（b）CAが公表する製品使用状況の判定基準（MIPS、CPU数、階層数、サーバ数、ユーザ数などを含むがこれらに限定しない）に基づいて使用できます。認定使用制限は、注文書（以下に定義します）または製品ボックスに同梱されるCDケースに定められています。CAは期間中ライセンス契約者に対して本製品のライセンスを内部業務での使用のみを目的として限定的、非独占的、譲渡不能なライセンスとして供与します。また、このライセンスには、本契約条件に加えて（a）ライセンス契約者およびCA関連会社との間で署名または契約が交わされたすべてのCA注文書またはお客様登録用紙に記載されているその他の契約条件、または（b）CAが必要に応じてライセンス契約者に供与する、本契約を言及または包含する、ライセンスプログラム証書に記載されているその他の契約条件が適用されます。（以下、（a）および（b）を「注文書」と表記します）。
+# 
+# 2.  本製品がプログラムのアルファ バージョンもしくはベータ バージョン（以下、「ベータ プログラム」または「ベータ バージョン」と表記します）であり、その時点で完成版ではない場合、CA は完成版リリースがベータ プログラムと同一であること、および完成版リリースが再インストールを必要としないことを保障するものではありません。ライセンス契約者は、サポートに登録した場合、またはその他にCAが必要であると認めた場合、本製品の使用経験に関する特定の情報をCAに対して提供することに同意するものとします。ライセンス契約者は、本製品のベータ バージョンが（a）テスト目的にのみ使用され、CAが書面にて承諾した場合を除き本番稼働されないこと、（b）テストおよびデバッグが完了していない試験的なプログラムであり、付属する文書が最終版でない場合も多くあることに同意し、この事実を承諾するものとします。ライセンス契約者は、本製品のベータ バージョンの完全性、正確性、およびライセンス契約者による使用または操作に関して、CAが一切の表明を行わないことに同意するものとします。本製品のベータ バージョンは「現状有姿」の状態で供与されます。本製品のベータ バージョンに対しては、あらゆる権原または不侵害に対するすべての保証や表明を含むがそれらに限定しない、明示または黙示のいかなる保証または表明も行われません。ライセンス契約者が本製品のベータ バージョンのテスター（本製品のベータ バージョン入手前の登録時に同意したベータ テストまたはリリース前テスト用の契約条件（以下、「ベータ テスト契約」と表記します）に定められています）である場合、ライセンス契約者は、本契約条件がベータ テスト契約の追加条件であり、ベータ テスト契約が本契約条件よりも優先して適用されることに同意するものとします。
+# 
+# 3.  本製品のライセンスが試用版または評価版として供与された場合、ライセンス契約者は、第1項で定めた制限に従って、30日間または別途定められた日数の試用期間（以下、「試用期間」と表記します）の間、本製品を評価目的でのみ使用することに同意するものとします。ライセンス契約者の本製品を使用する権利は、試用期間の終了と共に自動的に失効します。また、ライセンス契約者は試用期間の終了と同時に本製品をアンインストールし、本製品の部分的コピーを含むすべてのコピーをCAに返却するか、ライセンス契約者のコンピュータ ライブラリまたは記憶装置（あるいはその両方）から本製品の部分的コピーを含むすべてのコピーが削除および廃棄された旨をCAに対して書面にて保証することに同意するものとします。ライセンス契約者が試用期間の終了後も本製品の使用継続を希望する場合は、CAまたはCAの関連会社に連絡し所定の料金を支払って、本製品のライセンスを取得するものとします。試用期間中にライセンス契約者が本製品を使用する場合、本製品は「現状有姿」の状態で提供されるものとし、いかなる保証もされません。またCAは、試用期間中の本製品に関して、商品性ならびに特定用途に対する適合性に関する黙示の保証、および本契約で明示に定められているすべての保証を含むがそれらに限定しない、すべての保証から免責されます。
+# 
+# 4.  本製品にソフトウェア開発キット（以下、「SDK」と表記します）が含まれる場合、本段落の条項のみが SDK の使用に適用されます。SDKには、ソフトウェア、API、および関連ドキュメントが含まれる場合があります。ライセンス契約者は、提供されたSDKを、ライセンス契約者の内部的な目的にのみ使用できます。ここで言う内部的な目的とは、本製品をサード パーティ製のソフトウェアまたはハードウェアと統合するためのソフトウェアを開発するか、または本製品と連携して機能するソフトウェア（エージェントなど）を開発することを指します。SDKは、ライセンス契約者による本製品の内部的な使用を拡張する目的でのみ、ライセンス契約者に提供されます。ライセンス契約者に対して、本製品を配布する権利はいっさい付与されません。下記の第8項に定める制限に加えて、ライセンス契約者は、SDK、関連ドキュメント、およびSDKの実行可能なバージョンを含むいかなるアプリケーションも、第三者に対して、またはインターネット上で、コピー、開示、取引、または配布してはならず、また認定使用制限に抵触する形で使用してはなりません。本項に定める条件が、本使用条件に定められている他の条件と矛盾する場合は、SDKの使用に限り、本項の条件が優先して適用されます。
+# 
+# 本使用条件に定められている他の規定にかかわらず、準拠法によって許容される範囲内で、SDKは「現状有姿」の状態で提供されライセンスされるものとし、いかなる保証もなされません。
+# 
+# 5.  注文書に記載された料金、またはライセンス契約者と（CAまたはCA関連会社の）認定再販業者との間で合意された料金を支払うことによって、注文書に記載された期間（以下、「本期間」と表記します）にわたり本製品を使用する権利がライセンス契約者に供与されます。本製品を使用する権利には、注文書にあらかじめ定められた期間内にメンテナンスを受ける権利が含まれる場合があります。本契約による支払いの条件は、すべて注文書に記載されるものとします。注文書に記載がない場合は、CAの請求日から30日以内に支払われるものとします。ライセンス契約者は、ライセンス契約者に供与される本製品の新バージョンをすべてインストールするものとします。本期間の終了後、本契約に定める本製品の使用または保守（あるいはその両方）を継続する場合、ライセンス契約者は注文書に記載された継続する場合の料金を支払うものとします。本製品のライセンスをCAの認定再販業者から取得した場合は、支払い、価格、および割引に関する契約条項はライセンス契約者とライセンス契約者の選択したCA再販業者との間で交わされたものとなるため、本契約でそれらについて定めた条項は適用されません。ライセンス契約者のライセンス発注書（事前印刷されている条項を含むがそれに限定されない）またはライセンス契約者から認定CA再販業者への注文の一部として記載された契約条項で、本契約の条項と矛盾するかまたは異なっている条項は本製品には適用されず無効と見なされます。  上記にかかわらず、本製品が継続的な更新（ウィルス定義ファイルやセキュリティ更新ファイルなど）を必要とする場合、ライセンス契約者は本使用条件に同意してから1年間に限り、その継続的な更新サービスを受けることができます。
+# 
+# 6.  CAまたはCA関連会社によってメンテナンスが提供される場合、メンテナンス契約は注文書に記載されているとおり年次で更新されるものとします。? すべての料金は税抜きで明記されます。ライセンス契約者は、連邦税、州税、地方税、消費税、使用税、付加価値税、および動産税など、政府または政府の関連機関より課せられるすべての関税および税金を、CAまたはCA関連会社より提示される請求書に基づき支払うことに同意するものとします（ただし営業税や所得税など、支払い義務がCAに課せられるものを除きます）。これら諸税の免除を要求する場合は、CAに対して適切な証拠書類を提出するものとします。請求書に記載されている料金がライセンス契約者によって期限までに支払われなかった場合は、当該料金に対する利息（月1.5%または法的に許容される最高利率のいずれか低い方）が発生するものとします。
+# 
+# 7.  ライセンス契約者は注文書で特定する地域において、認定使用限度の範囲内で本製品をインストールおよび設置できるものとします。ライセンス契約者は、ライセンス契約者およびその子会社の内部業務での使用を目的とし、ラインセンス契約者が承認するエンドユーザ（以下、「承認エンドユーザ」と表記します）に対して業務の行われる場所に関わりなく本製品にアクセスする許可を与えることができます。ただしこれは本契約のライセンス契約者が、承認エンドユーザによる契約違反がライセンス契約者自身による契約違反と看做され、ライセンス契約者の責任となることについて、本契約により明示的に同意している場合に限ります。ライセンス契約者は、事前に書面で通知することによって、注文書に指定された地域内において本製品を別の設置場所に移動することができるものとします。本契約書において、「承認エンドユーザ」とは、ライセンス契約者、ライセンス契約者の子会社、およびそれらの従業員ならびに契約社員（外注委託業者、施設管理業者、管理サービス プロバイダまたはアプリケーション サービス プロバイダを除く）であり、本契約書に定められた条件と同等以上に厳格な条件の適用を受け、第三者の業務ではなくライセンス契約者の業務を実施するユーザを指します。本契約におけるライセンス契約者の「子会社」とは、ライセンス契約者が直接または間接的に支配している法人を意味します。また「支配」とは、その法人の株式の過半数を保有または支配しているか、法律または契約により当該法人の取締役会を支配しているか、またはそれに相当するものを意味します。ライセンス契約者がこの制限を超えて本製品を使用することを希望する場合、ライセンス契約者は本製品の購入先であるCAまたはCA関連会社に対してその旨を通知すると共に、使用範囲の拡張に対して請求される所定の料金を支払うものとします。
+# 
+# 8.  本製品（本使用条件に従ってライセンス契約者に提供される場合があるソース コードおよびオブジェクト コードを含みます）、関連ドキュメント、外観、構造、および構成は、CAまたはライセンス提供者、あるいはその両者の専有する財産であり、著作権、特許権、商標権、営業秘密、その他の法律によって保護されています。本製品の権利、および該当するSDKによってコピー、改変、翻訳、部分的コピー、生成、派生、または融合することで作成したソフトウェアのすべての権利は、例外なくCAまたはライセンス提供者、あるいはその両者に帰属します。 ライセンス契約者は、CAがライセンス契約者から受け取る本製品に関するあらゆるフィードバックを、当該フィードバックに基づいた派生物の複製および作成、ならびにこれらの配布を含め、CAの任意の業務のために承諾なくCAが使用できることに同意するものとします。本製品の使用権を他のCA製品と交換することはできません。本製品は単一の製品としてライセンス契約されます。本製品の構成要素を分離して使用することはできません。ライセンス契約者および承認エンドユーザは、本製品および本製品のライセンス条件を厳に機密として保持し、また権限のない者に開示または使用されないように本製品を保護するため最善の努力を講じるものとします。ライセンス契約者は、（i）準拠法が以下の制限を明示的に禁じている場合を除き、本製品を開示、逆コンパイル、分解、その他リバース エンジニアリングしてはならず、（ii）本製品に基づいた派生物を作成してはならず、（iii）CAから適切なライセンスを取得することなく、本製品を使用してファシリティ　マネジメント、アウトソーシング、サービス ビューロー、ホスト サービス、クラウド サービス、オンデマンド サービス、またはそれに類する業務を提供するなど、第三者の利益のために本製品を使用してはならず、また、（iv）CAから事前に書面にて承諾を得ずに、第三者に対して本製品の使用を許可してはなりません。ライセンス契約者は本製品のいかなるベンチマーク テストに関する情報も、CAから事前に書面にて承諾を得ずに第三者に開示してはなりません。準拠法が以下の制限を明示的に禁じている場合を除き、ライセンス契約者は、CAから事前に書面にて承諾を得ずに、本製品の全体または一部を譲渡、委譲、貸与、賃貸、使用、コピー、改変するか、または第三者に本製品に関して上記を許可してはなりません。ライセンス契約者は、CAまたはCAへのライセンス提供者の知的財産権に関する表示を削除してはなりません。ライセンス契約者は「コールドスタンバイ」による災害復旧、バックアップ、アーカイブのために本製品の適切な数量のコピーを作成することができます。ただしこれらのコピーは、ライセンス契約者の災害復旧の手順や有効性を検証する目的、および実際の災害発生後にライセンス契約者が本製品を使用できない場合に、妥当な期間内、必要に応じて使用する目的に限って使用できるものとします。ライセンス契約者は、何らかの理由でライセンス契約が失効した場合に、本製品の部分的コピーを含むすべてのコピーがすべてのコンピュータおよび記憶装置から削除され、本製品の部分的コピーを含むすべてのコピーが破棄またはCAに返却されそれらの使用が完全に停止されたことを、CAに対して書面にて保証するものとします。ライセンス契約者は、本製品が米国輸出規制（15 CFR 730-774）をはじめとするヨーロッパおよび米国の法律の規制対象となることを認識し、適用される全ての輸出入に関する法律および規制を遵守することに同意するものとします。ライセンス契約者は、米国の法律に反して本プロダクトを輸出、再輸出、移転しないこと、化学兵器、生物兵器、核兵器、ミサイルでの活用に結び付くいかなる目的にも使用しないこと、また本製品がそのような目的のために使用されるか、使用される可能性があることをライセンス契約者が知っているか知り得る理由がある場合に本製品の移転または再販売を行わないことに同意するものとします。本製品および本製品に付属するすべての文書は、CAの費用のみによって開発されたものであり、連邦調達規則2.101「Definitions」に定められている「commercial item(s)」および「commercial computer software」に相当します。本製品は、情報公開法（FOIA）, 5 U.S.C.§552（b）（または該当する場合は類似の米国州法）に定められる免責事項に従い、開示を免除されます。ライセンス契約者に過去に納品された製品が再度納品されることはありません。ライセンス契約者に過去に納品されていない製品は、受理可能な注文書をCAが受領した後に、ライセンス契約者またはライセンス契約者が選択した再販業者に提供されます。本製品は電子配送（「ESD」）、または、有形メディアの場合はCPT（CAまたはCA関連会社の出荷地からの輸送費込み条件:インコタームズ2010の定義に基づく）のいずれかCAまたはCA関連会社それぞれが適切と見なした方法で出荷されるものとします。ライセンス契約者が本製品を購入するCAまたはCA関連会社は、関税および通関手続きにおいて責任を負うことに同意します。本製品にCAのハードウェアが含まれる場合、当該ハードウェアの所有権はCAまたはCA関連会社の出荷地にて運送人への引渡しをもってお客様に移転するものとします。電子配送の場合、有形媒体は引き渡されないものとします。当該電子配送によって、適用される消費税その他の税金を自動的に控除されるものではありません。オペレーティングシステムに「汎用」または「GA」と指定されている場合、それはCAの既存の仕様に従ってCAがそのオペレーティングシステムに向けて本製品を提供していることを示しています。検収は放棄され、物理的な製品出荷、または電子納品のためのキー/アクセス コードの配信のうち、いずれか早い方が発生時点とみなされます。本製品の製造者はCA Inc.です。CAは、ライセンス契約者に通知をしたうえで、ライセンス契約者もしくはライセンス契約者の子会社の施設内において、または施設外からの連絡により、ライセンス契約者が本契約の条件を遵守していることを確認する目的で監査を行う権利を留保します。CAはこのような監査をライセンス契約者のオフィスの通常営業時間内に実施し、このような監査の実施によってライセンス契約者の業務を不当に妨げないように努めるものとします。また必要であれば、独立の第三者機関によって秘密保持契約に従い監査を行うものとします。本契約は、その準拠法選択の条項にかかわりなく、米国ニューヨーク州法が適用され、それに従って解釈されます。また、 本契約の下で、あるいは本契約に関連して発生した行為が、ニューヨーク州サフォーク郡の州および連邦裁判所の司法権に独占的に管轄されるものとします。
+# 
+# 9. CAは、CAが本契約を締結することができることを保証します。またCAは、CAに本契約を締結する権限がないという第三者による申し立て、およびライセンス契約者が本契約に従って本製品を使用したことで、ライセンス契約者が本製品の入手時点で使用を許可された地域内において米国の特許権、著作権を侵害したという第三者による申し立てによって生じる損害からライセンス契約者を免責し、自己の選択により和解することを保証します。同時にCAは、ライセンス契約者への本製品の引き渡し後90日間は、配布された製品がドキュメントに記載されている公開された仕様に従って実質的に動作することを保証します。ただし、CAが負うべき責任は、業界標準に鑑みて欠陥を是正するために合理的な努力をすることに限定されます。CAがライセンス契約者から書面にて上記保証の不履行に関する申し立てを受領してから、合理的に相当な期間内に（a）第三者の知的所有権を侵害せずに、または（b）CAの仕様書に従って、実質的に本製品を動作させることができない場合、CAは当該ライセンスを解除し、ライセンス契約者または認定CA再販業者に対して、支払われたライセンス料金および（または）サポートおよび保守料金を比例配分により返金する手続きを行うことができるものとします。かかる解除が行われた場合、返金額は（i）該当する注文書に記載されている本期間の残り月数に基づく比例配分によって計算するか、（ii）本製品が無期限でライセンス契約されている場合は、（返金額の算出目的に限り）3年償却ベースの比例配分によって計算します。本項で定めた保証は、本製品のベータ版、試用版、評価版、デモバージョン、またはSDKには適用されません。以下の場合、CAは保証の要求に対して補償または救済を行う義務を負わないものとします。（i）申し立てられた侵害または保証の要求が本製品の改変の結果生じたものであり、その改変がCAによるものではない場合。（ii）本製品がCAの仕様書、関連ドキュメント、ガイドラインに則って使用されていない場合。（iii）CAが提供するアップデートまたはパッチを使用することにより、申し立てられた侵害または保証の要求が回避できるか除去できる場合。（iv）申し立てられた侵害または保証の要求が、本製品を何らかの第三者製品と組み合わせて使用したことによる結果である場合。（v）本製品の所定の料金が期日を過ぎても支払われていないか、ライセンス契約者が本契約に違反している場合。ライセンス契約者の特定の指示に基づいてCAが作成した製品に関しては、本書に記載された免責は適用されず、CAはいかなる責任も負わないものとします。上に述べられた規定は、侵害の申し立てに対するCAの責任と義務の全てであり、また実際の侵害や侵害の申し立て、または知的財産やその他財産権の不正使用に関連してライセンス契約者に対して使用できる唯一の救済手段です。
+# 
+# 10.  上記を除き、準拠法で許容される範囲内においては、下記の通りです。
+# 
+# （I）CAは、商品性および特定用途への適合性に関する黙示の保証など、明示または黙示の保証を一切行いません。
+# （II）本製品の使用、操作、または改変によって発生した時間的損害、金銭的損害、のれん代の損害、結果としての損害、または間接的損害を含むあらゆる損害について、当該損害が生じる可能性について報告を受けていたとしても、CAはライセンス契約者または第三者が申し立てた損害賠償請求から免責されるものとします。上記の責任に関する制限が、準拠法に鑑みて無効であると認められた場合、CAが負う損害賠償責任はライセンス契約者が本製品に対して実際に支払ったライセンス料の金額を超えないものとします。代理店、卸業者、CA認定再販業者を含むすべての第三者は、CAに代わって上記の保証条件を改変したり、追加の保証を提供してはなりません。CAは、本製品がライセンス契約者の要求を満たしていること、または本製品の使用が中断しないこと、または欠陥がないことを保証しません。
+# 
+# 11.  ライセンス契約者は本使用条件を譲渡できますが、ライセンスの譲渡について定めたその時点で有効なCAの方針にライセンス契約者が従う場合に限ります。当該方針には、本製品の使用範囲がライセンス契約者の事業およびライセンス契約者が過半数の株式を所有する子会社の事業を超えないという条件が含まれます。
+# 
+# 12.  ライセンス契約者が本契約の規定に違反した場合、ライセンス契約者が支払い不能になった場合、ライセンス契約者に対する破産手続きまたは財産管理手続きが開始された場合、CAは本契約に定める自らの義務の履行を保留する権利および本契約をただちに解約する権利を持つものとします。またその場合、CAの他のすべての権利に加えて、本契約に基づくすべての支払はその期限の利益を喪失し、CA、またはライセンス契約者が本製品を購入したCA関連会社に対してただちに支払期限を迎えるものとします。
+# 
+# 13.  ライセンス契約者が該当するメンテナンス料を支払わなかった場合、メンテナンスを再開するためには、メンテナンス料が支払われなかった各年に対して、その時点で有効なCAのメンテナンス料の150%をライセンス契約者がCAまたは各CA関連会社に対して支払う必要があるものとします。
+# 
+# 14.  裁判所によって本契約のいずれかの条件規定が違法、無効、または執行不能だと判断された場合も、その他の条件規定はすべて完全な執行力および効力を持つものとします。本使用条件のいずれかの契約条件への違反に対する権利を放棄しても、当該契約条件以外の条件への違反に対する権利を放棄したことにはならず、また当該権利の放棄は当該権利を放棄する当事者から権限を与えられた代表者が書面にて行わないかぎり無効とします。本契約に関するご質問は、CA, Inc.の Worldwide Law Department、One CA Plaza, Islandia, NY 11749までお問い合わせ下さい。
+# 
+# 15.  ライセンス契約者が本製品のライセンスを米国外で取得した場合、本製品の使用に以下の各項が適用されます。
+# 
+# 第8項の最後の1文の規定にかかわらず、本契約はライセンス契約者が本製品のライセンスを取得した国の法律が適用され、それに従って管理されます（以下に別途規定がある場合を除きます）。
+# 
+# ヨーロッパ、中東およびアフリカ
+# 
+# 1. EMEAでは、CAグループ企業CA Europe S?rl（「CA Europe」）がライセンス提供者です。CA Europe S?rlは、CA Europe S?rlからEMEAにおける地域のCA子会社または認定CA再販業者を経由してライセンス契約者にライセンスとして提供された製品のライセンス提供者です。CAのサポートおよび保守（該当する場合）は、ローカルのCA子会社または認定CA再販業者によって提供されます。
+# 	
+# 2. EMEA とはヨーロッパ、中東およびアフリカを指します。
+# 
+# 3. 第9項の3番目および5番目の文は第三者の権利の侵害にのみ適用されます。 第9項の2番目の文が下記の文で置き換えられます。
+# 「CA Europeはまた、ライセンス契約者が本契約の条項に従う限りにおいて、本製品が本製品のドキュメントに記載された仕様に従って実質的に動作することを保証します。CA Europeがこの保証に違反した場合、ライセンス契約者の救済は、ライセンス契約者と協議の上、CA Europeが以下のいずれかを行うものとします。（i）欠陥を是正するために業界標準に鑑みて妥当と思われる努力をする。または（ii）ドキュメントに実質的に準拠した製品で本製品を置き換える。合理的な期間内に欠陥が修復できないか、欠陥の是正または置き換えがなされなかった場合、ライセンス契約者は、（i）サブスクリプションライセンスの場合、法的要件が満たされれば、合意による妥当な料金の減額を受けるか、正当な理由によって直ちに解除を行う権利を有する。（ii）無期限ライセンスの場合、自由裁量により、（1）該当する取引書面で合意された料金の取り消しまたは減額を受ける権利を有するか、（2）損害賠償を請求するか、または不要な出費に対する補償を要求する権利を有する。損害賠償の請求または不要な出費に対する補償の要求の権利は、以下10項に記載の責任の制限に従うものとします。無期限ライセンスの場合、本契約書に述べられる保証要求は、製品の提供後90日で効力を失うものとします。保証救済手段が適用されるのは次の場合に限られます。（i）申し立てられているエラーまたは欠陥をCA Europeが合理的に再現可能であり、（ii）本製品が改変されておらず、本製品のドキュメントに従って使用されており、（iii）違反の原因の全てまたは一部がCA以外の製品またはサービスによるものでない。上記保証がCA Europeによって提供される唯一の保証です。CA Europeまたはそのサプライヤは、黙示か明示かを問わず、本製品に一切エラーがないことを保証するものではありません。この保証には、十分な品質、非違法性、特定の目的に対する適合性に関する黙示の保証を含みますがこれらに限定されるものではありません。ライセンス契約者がこの保証条項のもとで保証の要求を行う場合、ライセンス契約者はその他のCA関連会社から同様の保証救済を求めることはできません。」
+# 
+# 4.第10項が下記の文で置き換えられます。
+# 
+# 「10.1	 責任の理由の如何に関わらず、CA Europeによる重大な過失や故意の怠慢、またはCA Europeの法的代表者またはCA Europeによってその契約義務の履行を委託されている担当者による重大な過失や故意の怠慢に起因する死亡、肉体的損傷、または健康被害や損害が発生した場合、また製造物責任法（「Produktehaftpflichtgesetz」）の下での責任の場合、CA Europeの責任の範囲は制限されないものとします。
+# 10.2	軽微な過失の場合、責任の理由の如何に関わらず、CA Europeは、本契約の遂行におよび相手方の通常の期待を履行する上で必要不可欠な義務の遂行を怠った場合にのみ責任を負うものとします。この場合、ライセンス契約者に対するCA Europe の責任範囲は、予測可能で、本契約に関連して通常発生しうる損害に限定されます。
+# 10.3	上記に加え、ライセンス契約者に対するCA Europe の間接損害、特殊損害、結果損害（利益の損失、取引上の損失、機会の損失、信用の損失を含むがこれらに限定されない）についての責任範囲は、予測可能で、本契約に関連して通常発生しうる損害に限定されます。
+# 10.4 	上記10.2および10.3において、本契約において許諾されたライセンスに関連して通常発生しうることが予測可能な損害とは、ライセンス契約者が本製品を購入した最初もしくは更新された期間のその時点で支払われたかまたは支払われる予定の料金の範囲内に限定されると理解されるものとします。
+# 10.5 データ損失に対する責任範囲は、通常の適切なデータバックアップにおける標準的な復旧作業に限定されるものとします。
+# 10.6 	本契約で提供される救済措置は、当事者の唯一の救済措置です。」
+# 
+# 5.本契約に以下の条項が追加されました。
+# 
+# 「不可抗力。 支払いの義務および情報の非公開に関連する義務を除き、本契約のいかなる定めにもかかわらず、当事者が取る行為、または取るべき行為の不履行が、戦争、騒乱、天災、ストライキ、その他（部分的か全体的かにかかわらず）労働、法律、法令、規制の停止、政府または政府組織（裁判所を含む）による命令など、当事者の制御を超えた原因によって発生したものである限り、いずれの当事者もそれらに対する責任を負わないものとします。」
+# 
+# 「ライセンスデータ。ライセンス契約者が製品に準拠した義務としてCA Europeに個人情報を提供する場合、ライセンス契約者は、(i) 自らが当該個人情報をCA Europeに提供することができる正当な権限を具備し、準拠すべき法令に則ってその提供を行うこと、(ii) CA EuropeおよびCAの企業グループに属する企業（以降「CAグループ企業」と表記）またはそれらの各社の下請事業者が、各自の義務を履行する目的によってそれらの情報を使用することができること、また、(iii) CA Europeは、上記の目的により、それらの情報をCAグループ企業および下請事業者に開示することができるほか、その出所元の国以外の国に転送することができることを、事実として表明するものとします。CA, IncはSafe Harbour 認定を受けており、本CA企業は関係する情報の保護/プライバシー関連の法律に従うことを誓約します。」
+# 
+# 6. 本契約の解釈と実施可能性はスイスの法律が規定します（法の抵触を除外する）。当事者は、本契約の下で、あるいは本契約に関連して発生した行為が、チューリッヒのスイス裁判所の司法権に独占的に管轄されることに同意するものとします。国連国際物品売買条約は本契約に適用されないものとします。
+# 
+# 7. EMEA用の本契約に関するご質問は、CA Europe S?rlのWorldwide Law Department、Building A, Lake Geneva Centre, Route de la Longeraie 9, 1110 Morges, Switzerlandまでお問い合わせ下さい。
+# 
+# アルゼンチン
+# CA関連子会社CA Argentina S.A.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、アルゼンチン共和国の法律に従って管理および解釈されます。本使用条件に関する争議は、すべてTribunales de la Cuidad de Buenos Airesによって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、CA de Argentina S.AのFinance Department、Avenida Alicia Moreau de Justo, 400, 2 piso, 1107, Buenos Airesまでお問い合わせ下さい。」
+# 
+# オーストラリア 
+# CA関連子会社CA (Pacific) Pty.Ltd (ABN 20 001 146 345) がライセンス提供者です。
+# 
+# 第2項、第3項、および第10項の末尾に次の文が追加されます。
+# 「CAから保証が提供されないと明記されていても、ライセンス契約者にはCompetition and Consumer Act 2010、その他の州または特別地域の法律によって特定の権利が与えられている場合があり、それらの権利は制限されますが除外されません。法律により許容される範囲内で、CAは本契約の条項に明示されていないすべての条件を除外します。また、Competition and Consumer Act 2010、その他の州または特別地域の法律によって課せられるすべての条項を、適用される法律によって許容される範囲内で制限します。」  
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、商取引が発生した州または特別地域の法律が適用されます。」
+# 
+# 第10項に以下の文が追加されます。
+# 「Competition and Consumer Act 2010、その他の州または特別地域の法律で黙示に定められている条項をCAが履行しなかった場合、CAが負う物品に関する責任は、当該物品の修理または交換、あるいは当該物品の修理または交換に要する費用の支払いに限定され、CAが負うサービスに関する責任は、サービスの再提供またはサービスの再提供に要する費用の支払いに限定され、これらのいずれが選択されるかはCAが決定できるものとします。条項が物品の販売権、瑕疵のない所有権、または瑕疵のない権限に関連する場合、あるいはCAによって供与される物品が通常は個人または家庭での使用または消費を目的に調達される場合、本項の制限はいずれも適用されません。」
+# 
+# ブラジル 
+# CA関連子会社CA Programas de Computador, Participa??es e Servi?os Ltda.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、ブラジル連邦共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議はすべてサンパウロ市当局（Sao Paulo City Hall）の法廷で裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、Computador, Participa??es e Servi?os Ltda.のWorldwide Law Department、Avenida das Na??es Unidas, 12901  6 andar  Torre Norte  S?o Paulo  SP, 04578-000までお問い合わせ下さい。」
+# 
+# カナダ 
+# CA関連子会社CA Canada Companyがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、オンタリオ州の法律が適用されます。」
+# 
+# チリ 
+# CA関連子会社CA de Chile, S.Aがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、チリ共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべてTribunales Ordinarios de la Cuidad de Santiagoによって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、CA de Chile, S.AのFinance Department、Avenida Providencia 1760, piso 15  Edificio Palladio, oficina 1501 - 6640709 Providencia - Santiagoまでお問い合わせ下さい。」
+# 
+# 中国  
+# CA関連子会社CA (China) Co., Ltd.がライセンス提供者です。
+# 
+# 第6項の2番目の文が下記の文で置き換えられます。
+# すべての料金は付加価値税を含みます。   
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、準拠法選択の条項に関わりなく、中華人民共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべて管轄権を有する北京の裁判所によって裁決されます。」
+# 
+# コロンビア
+# CA関連子会社CA Software de Colombia S.Aがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、コロンビア共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべてTribunales Ordinarios de la Cuidad de Bogot?によって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、CA Software de Colombia S.AのFinance Department、Edificio  Grupo Santander Central Hispano Torre 2 - Oficina 401 Carrera 7 - N? 99-53 - Bogot? D.C. - Colombiaまでお問い合わせ下さい。」
+# 
+# 香港
+# CA関連子会社CA (Hong Kong) Limited（Suites 2301 2306, 23rd Floor, Dah Sing Financial Centre, 108 Gloucester Road, Wanchai, Hong Kongを主たる事業所とする）がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、香港特別行政区の法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、香港特別行政区の裁判所が専属的管轄権を持つものとします。」
+# 
+# 第10項の末尾に次の1文が追加されます。「上記の責任の制限および責任の限度額は、物品販売の法令、サービスの供与の法令（黙示の条項）、または控除管理の法令に関するライセンス契約者の制定法上の権利を損なうものではなく、CAの過失のみによって人員が死傷した場合のCAの責任を制限または除外するものでもありません。」
+# 
+# インド
+# CA関連子会社CA (India) Technologies Private Limitedがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件およびその契約条件はインドの法律が適用され、それに従って解釈され、本使用条件に関する争議が発生した場合、ムンバイの裁判所が専属的管轄権を持つものとします。」 本製品が電子配送される場合は、CAは当該製品をインド以外の国に置かれたサーバからダウンロード可能にすることができるものとします。
+# 
+# インドネシア（シンガポールを参照）
+# 
+# 日本
+# CA関連子会社日本CA株式会社がライセンス提供者です。
+# 
+# 第6項の3番目の文が以下の文で置き換えられます。
+# 「ライセンス契約者は、政府または政府の関連機関より課せられるすべての関税および税金を、CAより提示される請求書に従って支払うことに同意するものとします（ただし、支払い義務がCAに課せられる税金を除きます）。」 
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、準拠法選択の条項に関わりなく、日本国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべて東京地方裁判所によって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、郵便番号102-0093、東京都千代田区平河町2-7-9、日本CA株式会社の法務部までお問い合わせ下さい。」
+# 
+# 韓国
+# CA関連子会社CA Korea Inc., Ltd.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、準拠法選択の条項に関わりなく、大韓民国の法律が適用され、それに従って解釈されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件に関するご質問は、CA Korea, Inc., Ltd. の Worldwide Law Department、City Air Tower (22nd Fl.), 159-9, Samsung-Dong, Kangnam-Ku, Seoul 135-973 Korea までお問い合わせ下さい。」
+# 
+# マレーシア
+# CA関連子会社CA (Malaysia) Sdn. Bhd.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、マレーシアの法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、マレーシアの裁判所が専属的管轄権を持つものとします。」
+# 
+# 第10項に以下の文が追加されます。
+# 「CAから保証が提供されないと明記されていても、ライセンス契約者には消費者保護法1999（Consumer Protection Act 1999）によって特定の権利が与えられている場合があり、保証は準拠法によって許容される範囲でのみ制限されます。」
+# 
+# メキシコ 
+# CA関連子会社CA Software de M?xico S.A. de C.V.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、メキシコ合衆国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべてTribunales de la Cuidad de M?xicoによって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 本契約に関するご質問は、CA Software de M?xico S.A. de C.VのFinance Department、Av.Miguel de Cervantes Saavedra 193, Suite 502, Col.Granada, Mexico City, MX 11500までお問い合わせ下さい。
+# 
+# ニュージーランド
+# CA関連子会社CA Pacific (NZ) Ltd.がライセンス提供者です。
+# 
+# 第6項の最後の1文にかかわらず、ライセンス契約者が請求書の支払いを怠った場合、月1.5%の利息が加算されます。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、ニュージーランドの法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、ニュージーランドの裁判所が専属的管轄権を持つものとします。」 
+# 
+# 第10項に以下の文が追加されます。
+# Although CA specifies that there are no warranties, Licensee may have certain rights under the Consumer Guarantees Act 1993 or other legislation which cannot be excluded or limited.ライセンス契約者が、消費者保証法1993に定められている営業用途でCAの物品またはサービスを調達した場合、当該物品またはサービスに対して消費者保証法1993は適用されません。本製品が消費者保証法1993に定められている営業用途以外の目的で調達された場合、本項の制限は消費者保証法1993の制限に従います。
+# 
+# 第12項に以下の文が追加されます。
+# 「ライセンス契約者の清算手続きまたは解散手続きが決議または開始された場合も、本項に定めるCAの権利が適用されます。」
+# 
+# ペルー
+# CA関連子会社CA de Peru S.Aがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、ペルー共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべてTribunales Ordinarios de La Cuidad de Limaによって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、CA de Peru S.AのFinance Department、Avenida Paseo de La Republica, 3211, Piso 11, San Isidro, Lima 27, Peruまでお問い合わせ下さい。」
+# 
+# フィリピン
+# CA関連子会社Philippine Computer Associates International, Inc.がライセンス提供者です。
+# 
+# 第8項の1～8番目の文が下記で置き換えられます。
+# 「本製品およびそれを改変したものについての権利は、CAに帰属します。本製品はCAまたはCAライセンス提供者の営業秘密および所有財産です。ライセンス契約者は、CAがライセンス契約者から受け取る本製品に関するあらゆるフィードバックを、当該フィードバックに基づいた派生物の複製および作成、ならびにこれらの配布を含め、CAの任意の業務のために承諾なくCAが使用できることに同意するものとします。本製品の使用権を他のCA製品と交換することはできません。ライセンス契約者およびライセンス契約者の被雇用者は、本製品および本製品の契約条件を機密情報として管理するものとします。ライセンス契約者は準拠法によって許容される範囲を超えて本製品を開示、逆コンパイル、分解、またはリバース エンジニアリングしてはなりません。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、フィリピン共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、マカティ市の裁判所のみが司法権を持つものとします。」   
+# 
+# 第12項が下記の文で置き換えられます。
+# 「ライセンス契約者が本使用条件の規定に違反した場合、ライセンス契約者が支払い不能になった場合、ライセンス契約者に対する破産手続きまたは財産管理手続きが開始された場合、CAは本使用条件に定める自らの義務の履行を保留する権利および本使用条件を書面による通知をもってただちに破棄する権利を持つものとします。またその場合、CAのすべての権利に加えて、本使用条件に定めるすべての支払はただちに支払期限を迎えるものとします。」
+# 
+# シンガポール 
+# CA関連子会社CA (Singapore) Pte. Ltd.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、シンガポール共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、シンガポール共和国の裁判所のみが司法権を持つものとします。」
+# 
+# 第9項の末尾に下記の文が追加されます。
+# 「準拠法によって許容される範囲で、CA は品質または特定用途への適合性に関する黙示の条件または保証から免責されます。」 
+# 
+# 台湾
+# CA関連子会社CA (Taiwan) Limitedがライセンス提供者です。登記された事業所の所在地は17F/B, No. 167, Tun Hwa North Road, Taipei City 105, Taiwanです。
+# 
+# 第6項の2番目の文が下記の文で置き換えられます。
+# すべての料金は付加価値税を含みません。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 本契約は、準拠法選択の条項に関わりなく、台湾の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべて台北地方裁判所（Taipei District Court）によって裁決されます。」
+# 
+# タイ
+# CA関連子会社CA Sales (Thailand) Co., Ltd.がライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、タイ王国の法律が適用され、それに従って解釈されます。本使用条件に関する争議が発生した場合、タイ王国の裁判所のみが司法権を持つものとします。」
+# 
+# ベネズエラ
+# CA関連子会社Computer Associates (CAI) de Venezuela, CAがライセンス提供者です。
+# 
+# 第8項の最後の1文が下記の文で置き換えられます。
+# 「本使用条件は、ベネズエラ共和国の法律が適用され、それに従って解釈されます。本使用条件に関する争議は、すべてTribunales Ordinarios de la Cuidad de Caracasによって裁決されます。」
+# 
+# 第14項の最後の1文が下記の文で置き換えられます。
+# 「本契約に関するご質問は、Computer Associates (CAI) de VenezuelaのFinance Department、CA, Avenue Francisco de Miranda, Centro Lido, Torre B, pisso 5, officina B-51, El Rosal, Caracas 1060, Venezuelaまでお問い合わせ下さい。」
+# 
+# 16.  本製品にサード パーティ製のソフトウェアが含まれており、そのソフトウェアのライセンス提供者から特定のライセンス条件を本使用条件に追加するよう要求された場合は、それらのライセンス条件が本使用条件の末尾に追加されています。
+# 
+# ライセンス契約者はこのライセンス契約書を最後まで読み、内容を理解した上で、最終行に「accept」と入力することで契約条件に同意したものと認めます。またライセンス契約者は、本使用条件の主旨に関してCAおよびライセンス契約者が完全に合意したことを本使用条件（本使用条件または本使用条件に定めるサード パーティ製ソフトウェアに関する条件を記載した注文書を含む）が示していることに同意するものとします。加えてライセンス契約者は、本使用条件の主旨に関する情報を入手した場合、その情報よりも本使用条件が優先されることに同意するものとします。ただし、ライセンス契約者に対して本製品のライセンス使用を許可する書面をCAおよびライセンス契約者の双方が交わした場合、本使用条件（下記のサード パーティ製品に関する契約条件を除く）は無効になるものとします。本使用条件を修正するには、CAおよびライセンス契約者双方の権限を委任された代表者同士が書面にて合意する必要があるものとします。  
+# 
+# 
+# CA Application Performance Management r. 10.7 (the "CA Software")
+# Third Party Terms
+# 
+# As referenced in the Specific Program Documentation for the CA Software, following is a list of third-party software components and their third party terms required by licensors of various third party components used with the CA Software: 
+# 
+# LsaUtility 1.0 
+# 
+# This product includes LsaUtiliy software published at The Code Project (http://www.codeproject.com/KB/cs/lsadotnet.aspx). LsaUtility is distributed in accordance with the terms of the following:" 
+# Preamble 
+# This License governs Your use of the Work. This License is intended to allow developers to use the Source Code and Executable Files provided as part of the Work in any application in any form. 
+# The main points subject to the terms of the License are: 
+# Source Code and Executable Files can be used in commercial applications; 
+# Source Code and Executable Files can be redistributed; and 
+# Source Code can be modified to create derivative works. 
+# No claim of suitability, guarantee, or any warranty whatsoever is provided. The software is provided "as-is". 
+# The Article(s) accompanying the Work may not be distributed or republished without the Author's consent 
+# This License is entered between You, the individual or other entity reading or otherwise making use of the Work licensed pursuant to this License and the individual or other entity which offers the Work under the terms of this License ("Author"). 
+# License 
+# THE WORK (AS DEFINED BELOW) IS PROVIDED UNDER THE TERMS OF THIS CODE PROJECT OPEN LICENSE ("LICENSE"). THE WORK IS PROTECTED BY COPYRIGHT AND/OR OTHER APPLICABLE LAW. ANY USE OF THE WORK OTHER THAN AS AUTHORIZED UNDER THIS LICENSE OR COPYRIGHT LAW IS PROHIBITED. 
+# BY EXERCISING ANY RIGHTS TO THE WORK PROVIDED HEREIN, YOU ACCEPT AND AGREE TO BE BOUND BY THE TERMS OF THIS LICENSE. THE AUTHOR GRANTS YOU THE RIGHTS CONTAINED HEREIN IN CONSIDERATION OF YOUR ACCEPTANCE OF SUCH TERMS AND CONDITIONS. IF YOU DO NOT AGREE TO ACCEPT AND BE BOUND BY THE TERMS OF THIS LICENSE, YOU CANNOT MAKE ANY USE OF THE WORK. 
+# Definitions. 
+# "Articles" means, collectively, all articles written by Author which describes how the Source Code and Executable Files for the Work may be used by a user. 
+# "Author" means the individual or entity that offers the Work under the terms of this License. 
+# "Derivative Work" means a work based upon the Work or upon the Work and other pre-existing works.
+# "Executable Files" refer to the executables, binary files, configuration and any required data files included in the Work. 
+# "Publisher" means the provider of the website, magazine, CD-ROM, DVD or other medium from or by which the Work is obtained by You. 
+# "Source Code" refers to the collection of source code and configuration files used to create the Executable Files. 
+# "Standard Version" refers to such a Work if it has not been modified, or has been modified in accordance with the consent of the Author, such consent being in the full discretion of the Author. 
+# "Work" refers to the collection of files distributed by the Publisher, including the Source Code, Executable Files, binaries, data files, documentation, whitepapers and the Articles. 
+# "You" is you, an individual or entity wishing to use the Work and exercise your rights under this License. 
+# Fair Use/Fair Use Rights. Nothing in this License is intended to reduce, limit, or restrict any rights arising from fair use, fair dealing, first sale or other limitations on the exclusive rights of the copyright owner under copyright law or other applicable laws. 
+# License Grant. Subject to the terms and conditions of this License, the Author hereby grants You a worldwide, royalty-free, non-exclusive, perpetual (for the duration of the applicable copyright) license to exercise the rights in the Work as stated below: 
+# You may use the standard version of the Source Code or Executable Files in Your own applications. 
+# You may apply bug fixes, portability fixes and other modifications obtained from the Public Domain or from the Author. A Work modified in such a way shall still be considered the standard version and will be subject to this License. 
+# You may otherwise modify Your copy of this Work (excluding the Articles) in any way to create a Derivative Work, provided that You insert a prominent notice in each changed file stating how, when and where You changed that file. 
+# You may distribute the standard version of the Executable Files and Source Code or Derivative Work in aggregate with other (possibly commercial) programs as part of a larger (possibly commercial) software distribution. 
+# The Articles discussing the Work published in any form by the author may not be distributed or republished without the Author's consent. The author retains copyright to any such Articles. You may use the Executable Files and Source Code pursuant to this License but you may not repost or republish or otherwise distribute or make available the Articles, without the prior written consent of the Author. 
+# Any subroutines or modules supplied by You and linked into the Source Code or Executable Files this Work shall not be considered part of this Work and will not be subject to the terms of this License. 
+# Patent License. Subject to the terms and conditions of this License, each Author hereby grants to You a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable (except as stated in this section) patent license to make, have made, use, import, and otherwise transfer the Work. 
+# Restrictions. The license granted in Section 3 above is expressly made subject to and limited by the following restrictions: 
+# You agree not to remove any of the original copyright, patent, trademark, and attribution notices and associated disclaimers that may appear in the Source Code or Executable Files. 
+# You agree not to advertise or in any way imply that this Work is a product of Your own. 
+# The name of the Author may not be used to endorse or promote products derived from the Work without the prior written consent of the Author. 
+# You agree not to sell, lease, or rent any part of the Work. This does not restrict you from including the Work or any part of the Work inside a larger software distribution that itself is being sold. The Work by itself, though, cannot be sold, leased or rented. 
+# You may distribute the Executable Files and Source Code only under the terms of this License, and You must include a copy of, or the Uniform Resource Identifier for, this License with every copy of the Executable Files or Source Code You distribute and ensure that anyone receiving such Executable Files and Source Code agrees that the terms of this License apply to such Executable Files and/or Source Code. You may not offer or impose any terms on the Work that alter or restrict the terms of this License or the recipients' exercise of the rights granted hereunder. You may not sublicense the Work. You must keep intact all notices that refer to this License and to the disclaimer of warranties. You may not distribute the Executable Files or Source Code with any technological measures that control access or use of the Work in a manner inconsistent with the terms of this License. 
+# You agree not to use the Work for illegal, immoral or improper purposes, or on pages containing illegal, immoral or improper material. The Work is subject to applicable export laws. You agree to comply with all such laws and regulations that may apply to the Work after Your receipt of the Work. 
+# Representations, Warranties and Disclaimer. THIS WORK IS PROVIDED "AS IS", "WHERE IS" AND "AS AVAILABLE", WITHOUT ANY EXPRESS OR IMPLIED WARRANTIES OR CONDITIONS OR GUARANTEES. YOU, THE USER, ASSUME ALL RISK IN ITS USE, INCLUDING COPYRIGHT INFRINGEMENT, PATENT INFRINGEMENT, SUITABILITY, ETC. AUTHOR EXPRESSLY DISCLAIMS ALL EXPRESS, IMPLIED OR STATUTORY WARRANTIES OR CONDITIONS, INCLUDING WITHOUT LIMITATION, WARRANTIES OR CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY OR FITNESS FOR A PARTICULAR PURPOSE, OR ANY WARRANTY OF TITLE OR NON-INFRINGEMENT, OR THAT THE WORK (OR ANY PORTION THEREOF) IS CORRECT, USEFUL, BUG-FREE OR FREE OF VIRUSES. YOU MUST PASS THIS DISCLAIMER ON WHENEVER YOU DISTRIBUTE THE WORK OR DERIVATIVE WORKS. 
+# Indemnity. You agree to defend, indemnify and hold harmless the Author and the Publisher from and against any claims, suits, losses, damages, liabilities, costs, and expenses (including reasonable legal or attorneys’ fees) resulting from or relating to any use of the Work by You. 
+# Limitation on Liability. EXCEPT TO THE EXTENT REQUIRED BY APPLICABLE LAW, IN NO EVENT WILL THE AUTHOR OR THE PUBLISHER BE LIABLE TO YOU ON ANY LEGAL THEORY FOR ANY SPECIAL, INCIDENTAL, CONSEQUENTIAL, PUNITIVE OR EXEMPLARY DAMAGES ARISING OUT OF THIS LICENSE OR THE USE OF THE WORK OR OTHERWISE, EVEN IF THE AUTHOR OR THE PUBLISHER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+# Termination. 
+# This License and the rights granted hereunder will terminate automatically upon any breach by You of any term of this License. Individuals or entities who have received Derivative Works from You under this License, however, will not have their licenses terminated provided such individuals or entities remain in full compliance with those licenses. Sections 1, 2, 6, 7, 8, 9, 10 and 11 will survive any termination of this License. 
+# If You bring a copyright, trademark, patent or any other infringement claim against any contributor over infringements You claim are made by the Work, your License from such contributor to the Work ends automatically. 
+# Subject to the above terms and conditions, this License is perpetual (for the duration of the applicable copyright in the Work). Notwithstanding the above, the Author reserves the right to release the Work under different license terms or to stop distributing the Work at any time; provided, however that any such election will not serve to withdraw this License (or any other license that has been, or is required to be, granted under the terms of this License), and this License will continue in full force and effect unless terminated as stated above. 
+# Publisher. The parties hereby confirm that the Publisher shall not, under any circumstances, be responsible for and shall not have any liability in respect of the subject matter of this License. The Publisher makes no warranty whatsoever in connection with the Work and shall not be liable to You or any party on any legal theory for any damages whatsoever, including without limitation any general, special, incidental or consequential damages arising in connection to this license. The Publisher reserves the right to cease making the Work available to You at any time without notice 
+# Miscellaneous 
+# This License shall be governed by the laws of the location of the head office of the Author or if the Author is an individual, the laws of location of the principal place of residence of the Author. 
+# If any provision of this License is invalid or unenforceable under applicable law, it shall not affect the validity or enforceability of the remainder of the terms of this License, and without further action by the parties to this License, such provision shall be reformed to the minimum extent necessary to make such provision valid and enforceable. 
+# No term or provision of this License shall be deemed waived and no breach consented to unless such waiver or consent shall be in writing and signed by the party to be charged with such waiver or consent. 
+# This License constitutes the entire agreement between the parties with respect to the Work licensed herein. There are no understandings, agreements or representations with respect to the Work not specified herein. The Author shall not be bound by any additional provisions that may appear in any communication from You. This License may not be modified without the mutual written agreement of the Author and You.
+# 
+# 最終更新日 2016-05-25
+# 
+# 上記の使用条件の契約条件に同意する場合は、最終行に「accept」と入力し、インストール処理を進めてください。 
+# 
+# インストール処理を中止する場合は、最終行に「reject」と入力してください。
+# 
+# CAエンドユーザライセンス使用許諾書の有効な値: {accept, reject}
+CA-EULA=reject
