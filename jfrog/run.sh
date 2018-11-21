@@ -1,0 +1,1 @@
+docker run -d -v /Users/noosr03/Documents/CA_Technical/2_ProjectRepo/JenkinsDockerInfra/jfrog/JFROG_RUNTIME/data:/var/opt/jfrog/artifactory  --name=jfrog -p 8989:8081 docker.bintray.io/jfrog/artifactory-oss
