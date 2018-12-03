@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<principals xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.3" plainTextPasswords="false" xsi:noNamespaceSchemaLocation="users0.3.xsd">
+    <users>
+        <user password="" name="SaasAdmin"/>
+        <user password="" name="Admin"/>
+        <user password="2a.1000.a9hZlUjIZUVV4vMjkv3BtA==.Yswf7wbWLN6rvbfb9jaXoQ==" name="Guest"/>
+        <user password="2a.1000.qPZK3Ql/Swn0IX/5u6zdbA==.ayqr0jCCFDgjd7w6Tj96fg==" name="cemadmin"/>
+    </users>
+    <groups>
+        <group name="CEM Analyst" description="CEM Analyst Group"/>
+        <group name="CEM System Administrator" description="CEM System Administrator Group">
+            <user name="Admin"/>
+            <user name="cemadmin"/>
+        </group>
+        <group name="Admin" description="Administrator Group">
+            <user name="Admin"/>
+            <user name="cemadmin"/>
+        </group>
+        <group name="CEM Tenant Administrator" description="CEM Tenant Administrator Group">
+            <user name="SaasAdmin"/>
+        </group>
+        <group name="CEM Configuration Administrator" description="CEM Configuration Administrator Group"/>
+        <group name="Users" description="Users Group"/>
+        <group name="CEM Incident Analyst" description="CEM Incident Analyst Group"/>
+    </groups>
+</principals>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<md:EntityDescriptor xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+	entityID="com.ca.apm.webview.serviceprovider" 
+	validUntil="2099-01-01T00:00:00Z">
+ 
+  <md:SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+  
+    <md:KeyDescriptor>
+      <ds:KeyInfo xmlns:ds="http://www.w3.org/2000/09/xmldsig#">
+        <ds:X509Data>
+          <ds:X509Certificate>
+MIIDhzCCAm+gAwIBAgIELOb2ZzANBgkqhkiG9w0BAQsFADB0MQswCQYDVQQGEwJVUzELMAkGA1UE
+CBMCQ0ExFDASBgNVBAcTC1NhbnRhIENsYXJhMRgwFgYDVQQKEw9DQSBUZWNobm9sb2dpZXMxDDAK
+BgNVBAsTA0FQTTEaMBgGA1UEAxMRaHR0cDovL3d3dy5jYS5jb20wHhcNMTUwMjI4MTg0NTEwWhcN
+MzUwMjI4MTg0NTEwWjB0MQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFDASBgNVBAcTC1NhbnRh
+IENsYXJhMRgwFgYDVQQKEw9DQSBUZWNobm9sb2dpZXMxDDAKBgNVBAsTA0FQTTEaMBgGA1UEAxMR
+aHR0cDovL3d3dy5jYS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDSg0mahly9
+51q0aSO4MXvlU7kxQWyXaOWBQyiAhXNcnoGBHvEjA0SOPn8rRaaRXs2AaQFMw0m/Em68MWBwkbgl
+/7U8HFoPIXlc7cOiBGLiu/gcmnJTqHjd4NMYx7kimMih41FKUZtIIGfFQ/HfVWJbqT/lwMcvaLU/
+vHl3j39d358zLSNgbgdAOAmXkGpn/Xd/lpehLzWNK9mt9ObAS1JpFt6t37HCm6qgSds+Tnkpm/gI
+wtyvdqSKtCvj6OpW2ij0wqnLRhfdcSdB3RFWzmLVRNMTD7VvzGMWsIDpcb0eOMyKgW8rYgB15S+j
+q1vMYefmLccTsBZ8c231ZeBU0QDZAgMBAAGjITAfMB0GA1UdDgQWBBQHrDYOqyInQ9MjXPGWMyNO
+5aC1cTANBgkqhkiG9w0BAQsFAAOCAQEAloTFCNWUQLnqofNiD5P6bPIleIUFesp0+1xfCXB/pzd8
+l5Kv3hQv3+ZdYJtGGkkwOrqp4AxGr4VQr+nogRBiEOtwrPdWyL0xhAEAlA0zFvTbXLEQ8wK/+GPc
+uf1lDu8Bfe89OHBHI2N+gaAT3rNroazC/IcWrhx5T+/4dmJSTRj/CO4srhRbL6y9JNn+NAmtEEXH
+tNwhRZXlC5i5hhkoleubgcIL6it8NQj3vwPZejuwSDz4O7SV6HNwD38b1dSjaZEv228eEvX8V4dp
+a4CA94x8wYFFtEtoG5U04RDG+97Mj9+Wf9T2XXgyqWZZ0lQsGvaPdFeLeE2BA8cJLAsLSQ==
+          </ds:X509Certificate>
+        </ds:X509Data>
+      </ds:KeyInfo>
+    </md:KeyDescriptor>
+	
+    <md:AssertionConsumerService Location="http://3d5211d60739:/saml.jsp" index="1"
+      Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"/>
+ 
+	</md:SPSSODescriptor>
+ 
+  <md:Organization>
+    <md:OrganizationName xml:lang="en">CA APM</md:OrganizationName>
+    <md:OrganizationDisplayName xml:lang="en">CA APM</md:OrganizationDisplayName>
+    <md:OrganizationURL xml:lang="en">http://www.ca.com/apm</md:OrganizationURL>
+  </md:Organization>
+ 
+</md:EntityDescriptor>

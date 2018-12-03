@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<policy xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.1" xsi:noNamespaceSchemaLocation="policy0.1.xsd">
+    <entity name="ComputerSystem" alertable="true">
+        <include_entities>Processor Memory File Port</include_entities>
+        <include_relations>IsComposedOf HasMember</include_relations>
+    </entity>
+    <entity name="Database" alertable="true">
+        <include_entities>Tablespace</include_entities>
+        <include_relations>IsManagerFor</include_relations>
+    </entity>
+    <entity name="DatabaseInstance" alertable="true">
+        <include_entities>Tablespace</include_entities>
+        <include_relations>IsManagerFor</include_relations>
+    </entity>
+    <entity name="Group" alertable="false">
+        <include_entities>ComputerSystem VirtualSystem</include_entities>
+        <include_relations>HasMember</include_relations>
+    </entity>
+</policy>

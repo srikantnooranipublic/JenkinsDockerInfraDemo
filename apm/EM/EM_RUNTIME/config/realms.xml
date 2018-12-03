@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<realms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.1" xsi:noNamespaceSchemaLocation="realms0.1.xsd">
+    <realm descriptor="Local Users and Groups Realm" id="Local Users and Groups" active="true">
+        <property name="usersFile">
+            <value>users.xml</value>
+        </property>
+    </realm>
+    <realm descriptor="SAML Realm" id="SAML Users and Groups" active="true"/>
+</realms>

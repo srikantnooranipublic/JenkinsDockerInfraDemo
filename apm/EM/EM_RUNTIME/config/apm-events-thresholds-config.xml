@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<apmEvents xsi:schemaLocation="http://www.ca.com/schema/apm/monitor apm-events-thresholds-9.1.xsd" xmlns="http://www.ca.com/schema/apm/events" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <clamps>
+        <description>
+            APM Clamps and Important Events configuration file. Please refer apm-evets-thresholds-config.xsd for schema file.
+            This configuration configures the pre-defined the clamps and important events. Each clamp/important event
+            threshold value will be applied for each agent or entire EM depends configuration.
+        </description>
+        <clamp id="introscope.enterprisemanager.agent.metrics.limit">
+            <description>
+                Most properties here put limits on # of metrics.
+                The last limits metric data. The metric clamping properties support hot config.
+                Per Agent limit. Takes into account live and historical metrics.
+            </description>
+            <threshold value="50000"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.transactionevents.storage.max.disk.usage">
+            <description>
+                The maximum desired disk usage in MB for the trace storage. If this maximum is exceeded,
+                then the daily historical trace stores will be deleted starting with the oldest first 
+                until the total historical trace storage size is below this value.	                 
+				The current days trace store actively storing traces will not be deleted even if 
+				its size exceeds this property value. The size of the trace index is not considered 
+				when determining what historical trace stores to delete. 
+            </description>
+            <threshold value="1024"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.metrics.live.limit">
+            <description>
+                Per EM limit. Takes into account only live metrics (i.e. currently reporting from Agents)
+            </description>
+            <threshold value="500000"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.metrics.historical.limit">
+            <description>
+                Per EM limit. Takes into account metrics with Smartstor data (i.e. live and historical metrics)
+            </description>
+            <threshold value="30000000"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.agent.connection.limit">
+            <description>
+                Limits the # of agent connections
+            </description>
+            <threshold value="400"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.disconnected.historical.agent.limit">
+            <description>
+                Limits the # of dead/disconnected agents that are mounted state to minimize
+                the runtime memory of EM.
+            </description>
+            <threshold value="400"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.events.limit">
+            <description>
+                Limits # of Events Processed by EM Per Interval
+            </description>
+            <threshold value="1250"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.agent.trace.limit">
+            <description>
+                Limits # of Transaction Events Processed Per Interval(Per Agent)
+            </description>
+            <threshold value="1000"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.agent.error.limit">
+            <description>
+                Limits # of Error Events Per Interval
+            </description>
+            <threshold value="10"/>
+        </clamp>
+        <clamp id="introscope.clw.max.users">
+            <description>
+                Limits the number of clw users
+            </description>
+            <threshold value="500"/>
+        </clamp>
+        <clamp id="introscope.workstation.max.users">
+            <description>
+                Limits the number of workstation users
+            </description>
+            <threshold value="40"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.collector.cdv.max">
+            <description>
+                Limits the number of CDV connections
+            </description>
+            <threshold value="5"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.transaction.discovery.max.nonidentifying.components">
+            <description>
+            	Transaction Discovery Processor (autogen) Maximum Number of Non-Identifying Components
+            </description>
+            <threshold value="50"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.max.number.domain.configuration.changes">
+            <description>
+            	Maximum number of domain configuration changes returned by query.  0 is unlimited.
+            </description>
+            <threshold value="0"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.max.transaction.user.groups">
+            <description>Maximum number of transaction user groups.</description>
+            <threshold value="5000"/>
+        </clamp>
+        <clamp id="introscope.enterprisemanager.max.application.user.rows">
+            <description>Maximum number of application users retrieved.</description>
+            <threshold value="1000"/>
+        </clamp>
+    </clamps>
+    <importantEvents>
+        <importantEvent id="introscope.enterprisemanager.harvest.duration">
+            <description>
+                EM Harvest Cycle(ms). 
+            </description>
+            <threshold value="3500"/>
+        </importantEvent>
+        <importantEvent id="introscope.enterprisemanager.cpu.usage">
+            <description>
+                EM CPU Usage(%)
+            </description>
+            <threshold value="60"/>
+        </importantEvent>
+        <importantEvent id="introscope.enterprisemanager.smartstor.duration">
+            <description>
+                EM Smart StorTime(ms)
+            </description>
+            <threshold value="3500"/>
+        </importantEvent>
+        <importantEvent id="apm.events.thresholds.config.error">
+            <description>
+                Important Event to notify the Introscope admin users of apm-events-thresholds-config.xml file's parsing
+                errors.
+            </description>
+        </importantEvent>
+        <importantEvent id="introscope.enterprisemanager.database.connectivity">
+            <description>Database Connectivity</description>
+        </importantEvent>
+        <importantEvent id="introscope.enterprisemanager.harvest.cycle.diff">
+            <description>Collector considered as slow if number of timesliceindex behind collector is relative to MOM
+                Harvest.
+            </description>
+            <threshold value="4"/>
+        </importantEvent>
+    </importantEvents>
+</apmEvents>

@@ -1,0 +1,458 @@
+{
+    "metrics": [{
+        "enabled": "true",
+        "metricName": "Java Version",
+        "metricSelector": "Enterprise Manager:Java Version",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Harvest Duration (ms)",
+        "metricSelector": "Enterprise Manager|Tasks:Harvest Duration (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Historical Metrics",
+        "metricSelector": "Enterprise Manager|Connections:Number of Historical Metrics",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Metrics",
+        "metricSelector": "Enterprise Manager|Connections:Number of Metrics",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Metrics Handled",
+        "metricSelector": "Enterprise Manager|Connections:Number of Metrics Handled",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Workstations",
+        "metricSelector": "Enterprise Manager|Connections:Number of Workstations",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Agents",
+        "metricSelector": "Enterprise Manager|Connections:Number of Agents",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Total Number of Evaluated Metrics",
+        "metricSelector": "Enterprise Manager|Internal|Alerts:Total Number of Evaluated Metrics",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Calculator Harvest Time (ms)",
+        "metricSelector": "Enterprise Manager|Internal:Calculator Harvest Time (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Calculators",
+        "metricSelector": "Enterprise Manager|Internal:Number of Calculators",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Applications",
+        "metricSelector": "Enterprise Manager|Connections:Number of Applications",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "EM Historical Metric Clamped",
+        "metricSelector": "Enterprise Manager|Connections:EM Historical Metric Clamped",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Disallowed Agents Clamped",
+        "metricSelector": "Enterprise Manager|Connections:Disallowed Agents Clamped",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "EM Live Metric Clamped",
+        "metricSelector": "Enterprise Manager|Connections:EM Live Metric Clamped",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Max Number of Agent connection Limit Exceeded Per Interval",
+        "metricSelector": "Enterprise Manager|Connections:Max Number of Agent connection Limit Exceeded Per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Events Processed",
+        "metricSelector": "Enterprise Manager|Connections:Number of Events Processed",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "EM Capacity",
+        "metricSelector": "Enterprise Manager:Overall Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "CPU Capacity",
+        "metricSelector": "Enterprise Manager|Health:CPU Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "GC Capacity (%)",
+        "metricSelector": "Enterprise Manager|Health:GC Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Harvest Capacity (%)",
+        "metricSelector": "Enterprise Manager|Health:Harvest Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Heap Capacity (%)",
+        "metricSelector": "Enterprise Manager|Health:Heap Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Incoming Data Capacity (%)",
+        "metricSelector": "Enterprise Manager|Health:Incoming Data Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "SmartStor Capacity(%)",
+        "metricSelector": "Enterprise Manager|Health:SmartStor Capacity (%)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Stories Average Processing Time (ms)",
+        "metricSelector": "Enterprise Manager|Assisted Triage|REST|Story Controller:Average Processing Time (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Requests Received per Interval",
+        "metricSelector": "Enterprise Manager|Assisted Triage|REST|Story Controller:Requests Received per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Stories Returned per Interval",
+        "metricSelector": "Enterprise Manager|Assisted Triage|REST|Story Controller:Stories Returned per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Baseline Engine:DB Persist Time (ms)",
+        "metricSelector": "Enterprise Manager|Baseline Engine:DB Persist Time (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Baseline Engine:Total Metrics Baselined (count)",
+        "metricSelector": "Enterprise Manager|Baseline Engine:Total Metrics Baselined (count)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Collector Metrics Received Per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Collector Metrics Received Per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Collector Metrics Sent Per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Collector Metrics Sent Per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Collector Number of Async Queries per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Collector Number of Async Queries per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Collector Number of Sync Queries per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Collector Number of Sync Queries per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Collector Sync Queries Duration (ms)",
+        "metricSelector": "Enterprise Manager|MOM:Collector Sync Queries Duration (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Incomplete Timeslices Sent Per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Incomplete Timeslices Sent Per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Number of Collector Metrics",
+        "metricSelector": "Enterprise Manager|MOM:Number of Collector Metrics",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Remote Metric Query Result Delivery Queue Size",
+        "metricSelector": "Enterprise Manager|MOM:Remote Metric Query Result Delivery Queue Size",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "MOM:Remote Metric Query Results Delivered Per Interval",
+        "metricSelector": "Enterprise Manager|MOM:Remote Metric Query Results Delivered Per Interval",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Vertex Count",
+        "metricSelector": "Enterprise Manager|ApplicationTriageMap|Database:Vertex Count",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "History Size",
+        "metricSelector": "Enterprise Manager|ApplicationTriageMap|Database:History Size",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Agent Clusters",
+        "metricSelector": "Enterprise Manager|Configuration:Number of Agent Clusters",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "OS name",
+        "metricSelector": "Enterprise Manager|Telemetry:OS Name",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "EM mode",
+        "metricSelector": "Enterprise Manager|Telemetry:Mode",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "EM release",
+        "metricSelector": "Enterprise Manager|Telemetry:Release",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Build Number",
+        "metricSelector": "Enterprise Manager|Telemetry:Build Number",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "AGC mode",
+        "metricSelector": "Enterprise Manager|Telemetry:AGC Mode",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of processors",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Processors",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Memory",
+        "metricSelector": "Enterprise Manager|Telemetry:Memory",
+        "frequency": {
+            "hours": "24"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Agent Versions",
+        "metricSelector": "Enterprise Manager|Telemetry:Connected Agent Versions",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Dashboards",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Dashboards",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Alerts",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Alerts",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Management Modules",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Management Modules",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Universes",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Universes",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Connected Collectors",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Collectors",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Number of Followers",
+        "metricSelector": "Enterprise Manager|Telemetry:Number of Providers",
+        "frequency": {
+            "hours": "2"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Smartstor Duration",
+        "metricSelector": "Enterprise Manager|Tasks:Smartstor Duration (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "GC Duration",
+        "metricSelector":"Enterprise Manager|GC Heap:GC Duration (ms)",
+        "frequency": {
+            "minutes": "30"
+        }
+    },
+    {
+        "enabled": "true",
+        "metricName": "Edge Count", 
+        "metricSelector": "Enterprise Manager|ApplicationTriageMap|Database:Edge Count",
+        "frequency": {
+            "minutes": "30"
+        }
+    }]
+}

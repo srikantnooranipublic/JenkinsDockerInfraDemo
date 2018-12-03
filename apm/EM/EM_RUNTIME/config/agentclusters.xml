@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?> 
+
+<agent-clusters xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="agentclusters0.1.xsd" version="0.1" >
+
+<!-- 
+	Define <agent-cluster> elements. Specify one for each virtual agent cluster.
+
+	Sample <agent-cluster> element below:
+
+		Define name and domain attributes. Optionally we can give a
+		tgtDomain attribute if we want to copy metrics to different domain.
+		Define regex for <agent-specifier> to match a set of agents
+
+		Define regex for <metric-specifier> to match a set of metrics
+		  NOTE: ".*" regex is NOT allowed in <metric-specifier> for performance reasons
+-->
+
+<!--
+	<agent-cluster name="PetStoreCluster" domain="SuperDomain" >
+		<agent-specifier>.*\|.*\|petstore.*</agent-specifier>
+
+		<metric-specifier>CPU\|.*</metric-specifier>
+		<metric-specifier>JMX\|.*</metric-specifier>
+		<metric-specifier>WebSpherePMI\|.*</metric-specifier>
+		<metric-specifier>Frontends\|.*</metric-specifier>
+	</agent-cluster>
+-->
+
+<!-- 
+    Uncomment the lines below if you are using the CEM Tracer and want
+    to see the metrics aggregated across agents.
+
+    Do not change the name or domain attributes, or the linking from
+    the CEM UI to the Workstation will not function correctly.
+
+    <agent-cluster name="CEM Agent" domain="SuperDomain">
+        <agent-specifier>.*\|.*\|.*</agent-specifier>
+        <metric-specifier>Customer Experience\|.*</metric-specifier>
+        <metric-specifier>Business Segment\|.*</metric-specifier>
+    </agent-cluster>
+-->
+<!--
+	Uncomment the lines below to copy RTTM metrics for all BTs to a
+	specific target domain called RTTMDomain. This domain should
+	be a valid domain defined in domains.xml. Access to this domain
+	can be controlled via users.xml and domains.xml. This regex can
+	be modified to suit specific set of metrics too rather than all
+	RTTM metrics.
+		 
+	<agent-cluster name="RTTMMetricAgent" domain="SuperDomain" tgtDomain="RTTMDomain">
+        <agent-specifier>.*\|CEM\|TESS Agent</agent-specifier>
+        <metric-specifier>TIM\|.*\|Business Service\|.*\|Business Transactions\|.*</metric-specifier>       
+    </agent-cluster>
+--> 
+
+</agent-clusters>

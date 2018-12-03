@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<server xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="server0.2.xsd" version="0.2">
+    <grant group="Admin" permission="full"/>
+</server>

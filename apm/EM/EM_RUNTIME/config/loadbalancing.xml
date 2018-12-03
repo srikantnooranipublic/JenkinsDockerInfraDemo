@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<!--
+	This file is used when EM is running in MOM and StandAlone mode only. 
+	This file is not used when EM is running in Collector or CDV mode. 
+	
+	Define <agent-collector> elements to control the assignment of connecting agents
+	to collectors by the MOM's Load Balancer.  The "name" attribute is optional. 
+	The MOM synchronizes this information with all Collectors in the cluster.
+
+	For each <agent-collector> element, define one or more <agent-specifier> elements
+	to match a set of agents.  The text content of the <agent-specifier> should be
+	a Perl5 regular expression.
+
+	For each <agent-collector> element, define zero or one <include> elements to list
+	the collectors the agents are permitted in.  Alternatively, define zero or one
+	<exclude> elements to list the collectors the agents are not permitted in. Either
+	<include> or <exclude> elements should be used.
+	This means that 
+		if the include list is empty, agents are not permitted in any
+		collectors. 
+		if the exclude list is empty, agents are permitted in all
+		collectors.
+		if both <include> and <exclude> is used in same <agent-collector> then
+		<exclude> is only considered	  
+		
+	Each <include> or <exclude> element contains zero or more <collector> elements. The <collector> 
+	element should have the attributes 'host' and 'port' defined. Optionally, when specified in an <include>
+	element, the <collector> element can have an additional boolean attribute 'latched'. When set to true,
+	agents matching the regular expressions will be latched to this <collector>. Multiple <collector> can have
+	'latched' attribute set, in which case the agent can connect to any of the latched collectors. 
+	If the latched collector goes down, then agent gets connected to next available latched collector.
+	Agent will connect to the non-latched collectors only if all of the latched collectors are unavailable.
+	
+	The <agent-collector> elements are evaluated by the MOM's Load Balancer in order.
+	If a connecting agent matches any of the agent specifiers, it is assigned to one
+	of the collectors in the include list.  If there is no include list, it is assigned
+	to a collector that is not in the exclude list.  If there are no collectors available
+	that meet these restrictions, the agent's connection is refused.
+
+	If an agent does not match any of the <agent-collector> elements, the 
+	"introscope.apm.agentcontrol.agent.allowed=true" property in 
+	IntroscopeEnterpriseManager.properties is used to determine if
+	agent is allowed or disallowed on the cluster. 
+		If the property value is true then the agent is assigned to a collector
+		chosen by the Load Balancer.
+		If the property value is false then the agent is disallowed
+	
+	Note: The regular expression for specifying all agents in <agent-specifier> is .*\|.*\|.*
+		  It stands for all host|process|agent. Do not use .* for specifying all agents.  
+		  The "name" attribute is optional.
+		  The Enterprise Manager supports hot config of this file. Changes to the
+		  agent-collector mappings do not require a restart of the Enterprise Manager.
+-->
+
+<loadbalancing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="loadbalancing0.1.xsd">
+
+<!-- 
+    Note: While mentioning the host of <collector>, please mention the same value mentioned for that collector at
+	collector connection properties(introscope.enterprisemanager.clustering.login.em1.host) in IntroscopeEnterpriseManager.properties.
+	Avoid using the value "localhost" for the host.
+ -->
+
+<!-- Example 1: Assign EPAgent1 to host01@5001 -->
+<!--
+    <agent-collector name="Example 1">
+        <agent-specifier>.*\|.*\|EPAgent1</agent-specifier>
+        <include>
+    		<collector host="host01" port="5001"/>
+        </include>
+    </agent-collector>
+-->
+
+<!-- Example 2: Don't assign EPAgent2 to host01@5001 -->
+<!--
+    <agent-collector name="Example 2">
+        <agent-specifier>.*\|.*\|EPAgent2</agent-specifier>
+        <exclude>
+    		<collector host="host01" port="5001"/>
+        </exclude>
+    </agent-collector>
+-->
+
+<!-- Example 3: Assign EPAgents and DemoAgents to either host01@5001 or host02@5001 -->
+<!--
+    <agent-collector name="Example 3">
+    	<agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+        <agent-specifier>.*\|.*\|DemoAgent.*</agent-specifier>
+        <include>
+    		<collector host="host01" port="5001"/>
+    		<collector host="host02" port="5001"/>
+	</include>
+    </agent-collector>
+-->
+
+<!-- Example 4: Exclude EPAgents from all collectors -->
+<!--
+    <agent-collector name="Example 4">
+        <agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+        <include>
+	</include>
+    </agent-collector>
+-->
+
+<!-- Example 5: Include EPAgents in all collectors -->
+<!--
+    <agent-collector name="Example 5">
+	<agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+	<exclude>
+	</exclude>
+    </agent-collector>
+-->
+
+<!-- Example 6: Allow EPAgents in collectors host01@5001, host02@5001 where host01@5001
+ is preferred over host02@5001 -->
+<!--
+    <agent-collector name="Example 6">
+	<agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+	<include>
+			<collector host="host01" port="5001" latched="true"/>
+    		<collector host="host02" port="5001"/>
+	</include>
+    </agent-collector>
+-->
+
+<!-- Example 7: Allow EPAgents in collectors host01@5001, host02@5001, host03@5001, host04@5001
+ where host01@5001 and host03@5001 are preferred over host02@5001, host04@5001 -->
+<!--
+    <agent-collector name="Example 7">
+	<agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+	<include>
+			<collector host="host01" port="5001" latched="true"/>
+    		<collector host="host02" port="5001"/>
+    		<collector host="host03" port="5001" latched="true"/>
+    		<collector host="host04" port="5001"/>
+	</include>
+    </agent-collector>
+-->
+
+<!-- Example 8: Redirect Default/SSL/HTTP/HTTPS agents to EMs within the cluster. 
+host01@5001, host02@5001 are EM's that are part of this cluster
+If agents with the mentioned specifiers connect via HTTP/HTTPS/SSL ports, use only the default communication port of EM. 
+MOM EM will redirect agent to the specific communication port of the Collector EM.
+Note:Use only the default port for connecting to collectors within the same cluster -->
+<!--
+    <agent-collector name="Example 8">
+	<agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+	<include>
+			<collector host="host01" port="5001"/>
+    		<collector host="host02" port="5001"/>
+	</include>
+    </agent-collector>
+-->
+
+<!-- Example 9: Redirect EPAgents to EMs outside the cluster. 
+host01@5001, host02@5001 are EM's that are not part of this cluster
+Note: If agents with the mentioned specifiers connect via HTTP/HTTPS/SSL ports, use the respective communication port of the EM. 
+This is because MOM EM has no way of knowing properties of EMs outside this cluster-->
+<!--Default communication-->
+<!--
+    <agent-collector name="Example 9.1">
+       <agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+       <include>
+              <collector host="host01" port="5001"/>
+              <collector host="host02" port="5001"/>
+       </include>
+    </agent-collector>
+-->
+<!--SSL Communication-->
+<!--
+    <agent-collector name="Example 9.2">
+       <agent-specifier>.*\|.*\|EPAgentSSL.*</agent-specifier>
+       <include>
+              <collector host="host01" port="5443"/>
+              <collector host="host02" port="5443"/>
+       </include>
+    </agent-collector>
+-->
+<!--HTTP Communication-->
+<!--
+    <agent-collector name="Example 9.3">
+       <agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+       <include>
+              <collector host="host01" port="8081"/>
+              <collector host="host02" port="8081"/>
+       </include>
+    </agent-collector>
+-->
+<!--HTTPS Communication-->
+<!--
+    <agent-collector name="Example 9.4">
+       <agent-specifier>.*\|.*\|EPAgent.*</agent-specifier>
+       <include>
+              <collector host="host01" port="8444"/>
+              <collector host="host02" port="8444"/>
+       </include>
+    </agent-collector>
+-->
+
+</loadbalancing>
