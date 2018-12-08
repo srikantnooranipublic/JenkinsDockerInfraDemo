@@ -22,15 +22,17 @@ COPY ${STD_EM_FILES}/ca-eula.txt ${STD_EM_FILES}/SampleResponseFile.Introscope.t
 #RUN 'echo "10.238.238.47 centOS7.5-aop.dev.fco" >> /etc/hosts' && \
 RUN   chmod +x /entrypoint.sh
 
-# run the installer and hotfix
-RUN chmod +x ${INTROSCOPE_BIN} && \
-    ./${INTROSCOPE_BIN} -f SampleResponseFile.Introscope.txt
+# run the installer and hotfix - Need AOP i.e VPN
+RUN chmod +x ${INTROSCOPE_BIN} && \ 
+ ./${INTROSCOPE_BIN} -f SampleResponseFile.Introscope.txt
 
 RUN cd ${INTROSCOPE_HOME} 
 
 LABEL version="${INTROSCOPE_VERSION}"
 
 WORKDIR ${INTROSCOPE_HOME}
+
+RUN mkdir ${INTROSCOPE_HOME}/link/
 
 
 EXPOSE 5001 8081 8444
@@ -41,7 +43,8 @@ COPY ${STD_EM_FILES}/Introscope_Enterprise_Manager.lax  .
 COPY ${STD_EM_FILES}/IntroscopeEnterpriseManager.properties config/
 COPY ${STD_EM_FILES}/tess-db-cfg.xml config/
 
-RUN rm -f /opt/introscope-install/${INTROSCOPE_BIN}
+RUN rm -f /opt/introscope-install/${INTROSCOPE_BIN} && \
+	chmod -R 755 ${INTROSCOPE_HOME}
 
 
 ENTRYPOINT ["/entrypoint.sh"]

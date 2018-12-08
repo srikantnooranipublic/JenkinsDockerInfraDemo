@@ -33,8 +33,8 @@ WORKDIR ${INTROSCOPE_HOME}
 EXPOSE 8999
 
 
-RUN sed -i 's/g.isAccountTrial/false/g' ${INTROSCOPE_HOME}/product/webview/configuration/org.eclipse.osgi/bundles/10/1/.cp/WebContent/ApmServer/scripts/script* \
-  chmod +x /entrypoint.sh
+#RUN sed -i 's/g.isAccountTrial/false/g' ${INTROSCOPE_HOME}/product/webview/configuration/org.eclipse.osgi/bundles/10/1/.cp/WebContent/ApmServer/scripts/script* \
+RUN  chmod +x /entrypoint.sh
 
 COPY ${STD_WV_FILES}/Introscope_WebView.lax  .
 COPY ${STD_WV_FILES}/IntroscopeWebView.properties config/

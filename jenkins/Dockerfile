@@ -4,6 +4,10 @@ LABEL MAINTAINER="srikant.noorani@ca.com"
 
 USER root
 
-RUN apt-get update && apt-get install -y maven
+RUN /bin/rm -rf /etc/sudoers
+
+RUN apt-get update && apt-get install -y maven && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*
+
+RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 USER jenkins

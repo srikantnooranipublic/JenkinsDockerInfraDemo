@@ -31,6 +31,6 @@ COPY ["${APP_FILES}/entrypoint.sh", "/"]
 
 RUN   chmod +x /entrypoint.sh
 
-expose 8080
+expose 8999
 
 ENTRYPOINT ["/entrypoint.sh"]
