@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: vansr10
+Build-Jdk: 1.8.0_171
+Extension-Name: performance-comparator-jenkins
+Specification-Title: This plug-in does performance comparison and expo
+ rts outputs to various formats based upon the configuration
+Implementation-Title: performance-comparator-jenkins
+Implementation-Version: 1.0
+Group-Id: com.ca.apm.jenkins
+Short-Name: performance-comparator-jenkins
+Long-Name: CAAPM Performance Comparator
+Url: http://jenkins-ci.org/plugin/performance-comparator-jenkins/
+Plugin-Version: 1.0
+Hudson-Version: 1.580.1
+Jenkins-Version: 1.580.1
+Plugin-Dependencies: structs:1.7
+Plugin-Developers: 
+

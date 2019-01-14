@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.jenkins-ci.plugins</groupId>
+        <artifactId>plugin</artifactId>
+        <version>3.19</version>
+    </parent>
+
+    <artifactId>trilead-api</artifactId>
+    <version>1.0.1</version>
+    <packaging>hpi</packaging>
+
+
+    <name>Trilead API Plugin</name>
+    <description>
+        This plugin provides access to Trilead without having to bundle Trilead in Jenkins core
+    </description>
+    <url>http://wiki.jenkins-ci.org/display/JENKINS/Trilead+API+Plugin</url>
+    <licenses>
+        <license>
+            <name>The MIT license</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>mc1arke</id>
+            <name>Michael Clarke</name>
+            <email>michael.m.clarke@gmail.com</email>
+        </developer>
+        <developer>
+            <id>kuisathaverat</id>
+            <name>Ivan Fernandez</name>
+            <email>kuisathaverat@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/jenkinsci/trilead-api-plugin.git</connection>
+        <developerConnection>scm:git:git@github.com:jenkinsci/trilead-api-plugin.git</developerConnection>
+        <url>https://github.com/jenkinsci/trilead-api-plugin</url>
+      <tag>trilead-api-1.0.1</tag>
+  </scm>
+
+    <properties>
+      <jenkins.version>2.89.4</jenkins.version>
+      <java.level>8</java.level>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repo.jenkins-ci.org</id>
+            <url>https://repo.jenkins-ci.org/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.jenkins-ci</groupId>
+            <artifactId>trilead-ssh2</artifactId>
+            <version>build-217-jenkins-14</version>
+        </dependency>
+        <dependency>
+            <groupId>org.kohsuke</groupId>
+            <artifactId>trilead-putty-extension</artifactId>
+            <version>1.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.jenkins-ci</groupId>
+                    <artifactId>trilead-ssh2</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.jenkins-ci.tools</groupId>
+                <artifactId>maven-hpi-plugin</artifactId>
+                <version>${hpi-plugin.version}</version>
+                <configuration>
+                    <!-- once all plugins that use Classloader based checks of Trilead classes depend on this plugin,
+                    we can enable the following line -->
+                    <!-- <maskClasses>com.trilead.ssh2</maskClasses> -->
+                    <!-- once all plugins that use trilead depend on this plugin, we can enable the following line -->
+                    <!-- <globalMaskClasses>com.trilead.ssh2</globalMaskClasses> -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

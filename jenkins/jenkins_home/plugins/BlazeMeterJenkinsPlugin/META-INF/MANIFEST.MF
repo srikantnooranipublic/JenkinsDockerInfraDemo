@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: artem
+Build-Jdk: 1.8.0_181
+Extension-Name: BlazeMeterJenkinsPlugin
+Specification-Title: This is a plugin which allows a developer to run 
+ a set of performance tests against the BlazeMeter Cluster
+Specification-Vendor: BlazeMeterInc
+Implementation-Vendor: BlazeMeterInc
+Implementation-Title: BlazeMeterJenkinsPlugin
+Implementation-Version: 4.7
+Group-Id: com.blazemeter.plugins
+Short-Name: BlazeMeterJenkinsPlugin
+Long-Name: BlazeMeter plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/BlazeMeter+Plugin
+Plugin-Version: 4.7
+Hudson-Version: 1.580.1
+Jenkins-Version: 1.580.1
+Plugin-Dependencies: credentials:2.1.4,workflow-step-api:2.9,job-dsl:1
+ .50;resolution:=optional
+Plugin-Developers: Artem Fedorov (BlazeMeter):sat_blazemeter:sat@blaze
+ meter.com
+
