@@ -18,16 +18,6 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - HOST_DOCKER_PATH:/usr/bin/docker
  
- jfrog:
-    build:
-      context: ./jfrog
-      dockerfile: $PWD/Dockerfile
-    image: docker.bintray.io/jfrog/artifactory-oss
-    container_name: jfrog
-    ports:
-      - "8989:8081"
-    volumes:
-      - HOST_MOUNT_DIR/jfrog/JFROG_RUNTIME/data:/var/opt/jfrog/artifactory
 
  apm-wv:
     build:
