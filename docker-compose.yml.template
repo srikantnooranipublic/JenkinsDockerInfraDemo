@@ -6,7 +6,7 @@ services:
     build:
       context: ./jenkins
       #dockerfile: $PWD/Dockerfile
-    image: srikns/ca-apm-jenkins:2.0
+    #image: srikns/ca-apm-jenkins:2.0
     container_name: jenkins
     environment:
       - JAVA_OPS="-Dhudson.model.DirectoryBrowserSupport.CSP="
