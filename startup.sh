@@ -7,10 +7,18 @@
 ## MIT License - provided on an as is basis
 #####
 
+CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
+
+clear
 echo ""
-echo "**JenkinsDockerInfra startup Script:** This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
-echo "Ensure Docker, Docker Compose is installed on the host machine and you are VPN'd to CA network"
-echo "This will remove any existing APM, Jenkins, application container before setting up everything... Pls press Y and Enter to proceed"
+echo "**JenkinsDockerInfra startup Script:** "
+echo "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
+echo "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
+echo ""
+echo "This will remove following container before setting up everything again... "
+echo " $CONTAINERS"
+echo ""
+echo "Pls press Y and Enter to proceed....."
 echo ""
 
 read READY
@@ -26,26 +34,16 @@ fi
 ##CONTAINERS=`grep container_name docker-compose.yml |awk  '{print $2}'`
 
 #CONTAINERS=`docker ps -aq`
-CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
-echo ""
-echo "This will remove following containers. Pls press Y and Enter to proceed..."
-echo "$CONTAINERS"
-echo ""
+echo "Deleting Containers $CONTAINERS"	
 
-read OK
+for CONTAINER in $CONTAINERS; do
+	echo "removing $CONTAINER"
+	docker stop $CONTAINER
+	docker rm $CONTAINER
 
-if [ x"$OK" != "xY" ]; then
-	echo "Deleting Containers $CONTAINERS"	
+done
 
-	for CONTAINER in $CONTAINERS; do
-		echo "removing $CONTAINER"
-		docker stop $CONTAINER
-		docker rm $CONTAINER
-
-	done
-
-fi
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
 sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' docker-compose.yml.template > docker-compose.yml.changed
@@ -62,7 +60,8 @@ EM_INSTALLER=introscope-installer-unix-10.6.0.179-linuxAMD64.bin
 
 if [ ! -f "${EM_FILE_FOLDER}/${EM_INSTALLER}" ]; then
 	
-	echo "EM Installer ${EM_FILE_FOLDER}/${EM_INSTALLER} Not Found. Will download (***VPN needed***) could take a while... "
+	echo "EM Installer ${EM_FILE_FOLDER}/${EM_INSTALLER} Not Found. Will download (***VPN needed***). could take a while... "
+	echo ""
 
 	curl http://oerth-scx.ca.com:8081/artifactory/repo/com/ca/apm/delivery/introscope-installer-unix/10.6.0.179/introscope-installer-unix-10.6.0.179-linuxAMD64.bin -o ${EM_FILE_FOLDER}/${EM_INSTALLER}
 
