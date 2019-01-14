@@ -1,8 +1,10 @@
 #!/bin/bash
 
 echo ""
-echo "This will setup your complete APM, Jenkins, application docker env"
+echo "JenkinsDockerInfra startup Script: This will setup your complete APM (EM,WV,DB), Jenkins, application etc in a container. "
+echo "Ensure Docker is installed on the host machine "
 echo "This will remove any existing APM, Jenkins, application container before setting up everything... Pls press Y and Enter to proceed"
+echo ""
 
 read READY
 
@@ -14,14 +16,15 @@ if [ x"$READY" != "xY" ]; then
 fi
 
 
-#CONTAINERS=`grep container_name docker-compose.yml |awk  '{print $2}'`
-#CONTAINERS=`docker ps -aq`
-#for CONTAINER in $CONTAINERS; do
-	#echo "removing $CONTAINER"
-	#docker stop $CONTAINER
-	#docker rm $CONTAINER
+##CONTAINERS=`grep container_name docker-compose.yml |awk  '{print $2}'`
 
-#done
+CONTAINERS=`docker ps -aq`
+for CONTAINER in $CONTAINERS; do
+	echo "removing $CONTAINER"
+	docker stop $CONTAINER
+	docker rm $CONTAINER
+
+done
 
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
@@ -46,6 +49,7 @@ if [ ! -f "${EM_FILE_FOLDER}/${EM_INSTALLER}" ]; then
 fi
 
 
+#its Webview's turn
 WV_FILE_FOLDER=apm/WV/WV_FILES
 WV_INSTALLER=introscope-installer-unix-10.6.0.179-linuxAMD64.bin
 
@@ -58,8 +62,7 @@ if [ ! -f "${WV_FILE_FOLDER}/${WV_INSTALLER}" ]; then
 	cp ${EM_FILE_FOLDER}/${EM_INSTALLER} ${WV_FILE_FOLDER}
 fi
 
-#run docker compose
-#docker-compose up -d
+#Run docker compose
+docker-compose up -d
 
-exit
 docker ps
