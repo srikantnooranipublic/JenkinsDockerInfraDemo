@@ -11,7 +11,7 @@
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
-      <projectUrl>https://github.com/srikantnooranipublic/InventoryTrackingService.git/</projectUrl>
+      <projectUrl>https://github.com/srikantnooranipublic/InventoryTrackingServiceDemo.git/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <hudson.model.ParametersDefinitionProperty>
@@ -46,7 +46,7 @@
       <userRemoteConfigs>
         <hudson.plugins.git.UserRemoteConfig>
           <refspec>+refs/heads/develop:refs/remotes/origin/develop</refspec>
-          <url>git@github.com:srikantnooranipublic/InventoryTrackingService.git</url>
+          <url>git@github.com:srikantnooranipublic/InventoryTrackingServiceDemo.git</url>
         </hudson.plugins.git.UserRemoteConfig>
       </userRemoteConfigs>
       <branches>
