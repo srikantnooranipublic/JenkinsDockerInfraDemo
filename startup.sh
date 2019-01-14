@@ -15,7 +15,7 @@ echo "**JenkinsDockerInfra startup Script:** "
 echo "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
 echo "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
 echo ""
-echo "This will remove following container before setting up everything again... "
+echo "This will remove following container (if they exists) before setting up everything again... "
 echo " $CONTAINERS"
 echo ""
 echo "Pls press Y and Enter to proceed....."
@@ -35,7 +35,7 @@ fi
 
 #CONTAINERS=`docker ps -aq`
 
-echo "Deleting Containers $CONTAINERS"	
+echo "Deleting Containers $CONTAINERS if they exists"	
 
 for CONTAINER in $CONTAINERS; do
 	echo "removing $CONTAINER"
