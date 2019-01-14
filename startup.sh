@@ -1,8 +1,15 @@
 #!/bin/bash
 
+####
+## Purpose: To set up complete end to end apm, jenkins, app env for DevOps Demo
+## Author Srikant.Noorani@Broadcom.com 
+## Jan 2019
+## MIT License - provided on an as is basis
+#####
+
 echo ""
-echo "JenkinsDockerInfra startup Script: This will setup your complete APM (EM,WV,DB), Jenkins, application etc in a container. "
-echo "Ensure Docker is installed on the host machine "
+echo "**JenkinsDockerInfra startup Script:** This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
+echo "Ensure Docker, Docker Compose is installed on the host machine and you are VPN'd to CA network"
 echo "This will remove any existing APM, Jenkins, application container before setting up everything... Pls press Y and Enter to proceed"
 echo ""
 
@@ -18,14 +25,27 @@ fi
 
 ##CONTAINERS=`grep container_name docker-compose.yml |awk  '{print $2}'`
 
-CONTAINERS=`docker ps -aq`
-for CONTAINER in $CONTAINERS; do
-	echo "removing $CONTAINER"
-	docker stop $CONTAINER
-	docker rm $CONTAINER
+#CONTAINERS=`docker ps -aq`
+CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
-done
+echo ""
+echo "This will remove following containers. Pls press Y and Enter to proceed..."
+echo "$CONTAINERS"
+echo ""
 
+read OK
+
+if [ x"$OK" != "xY" ]; then
+	echo "Deleting Containers $CONTAINERS"	
+
+	for CONTAINER in $CONTAINERS; do
+		echo "removing $CONTAINER"
+		docker stop $CONTAINER
+		docker rm $CONTAINER
+
+	done
+
+fi
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
 sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' docker-compose.yml.template > docker-compose.yml.changed
@@ -42,7 +62,7 @@ EM_INSTALLER=introscope-installer-unix-10.6.0.179-linuxAMD64.bin
 
 if [ ! -f "${EM_FILE_FOLDER}/${EM_INSTALLER}" ]; then
 	
-	echo "EM Installer ${EM_FILE_FOLDER}/${EM_INSTALLER} Not Found. Downloading (VPN needed) could take upto half hour depending on network speed... "
+	echo "EM Installer ${EM_FILE_FOLDER}/${EM_INSTALLER} Not Found. Will download (***VPN needed***) could take a while... "
 
 	curl http://oerth-scx.ca.com:8081/artifactory/repo/com/ca/apm/delivery/introscope-installer-unix/10.6.0.179/introscope-installer-unix-10.6.0.179-linuxAMD64.bin -o ${EM_FILE_FOLDER}/${EM_INSTALLER}
 

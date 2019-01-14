@@ -5,7 +5,7 @@ services:
  jenkins:
     build:
       context: ./jenkins
-      dockerfile: $PWD/Dockerfile
+      #dockerfile: $PWD/Dockerfile
     image: srikns/ca-apm-jenkins:2.0
     container_name: jenkins
     environment:
@@ -22,7 +22,7 @@ services:
  apm-wv:
     build:
       context: ./apm/WV
-      dockerfile: $PWD/Dockerfile
+      #dockerfile: $PWD/Dockerfile
     image: apm-wv:latest
     container_name: apm-wv
     depends_on:
@@ -35,7 +35,7 @@ services:
  apm-em:
     build:
       context: ./apm/EM
-      dockerfile: $PWD/Dockerfile
+      #dockerfile: $PWD/Dockerfile
     image: apm-em:latest
     container_name: apm-em
     depends_on:
@@ -55,7 +55,7 @@ services:
  apm-db:
     build:
       context: ./apm/DB
-      dockerfile: $PWD/Dockerfile
+      #dockerfile: $PWD/Dockerfile
     image: apm-db
     container_name: apm-db
     ports:
@@ -67,7 +67,7 @@ services:
  sonarqube:
     build:
       context: ./sonarqube
-      dockerfile: $PWD/Dockerfile
+      #dockerfile: $PWD/Dockerfile
     image: sonarqube
     container_name: sonarqube
     ports:
