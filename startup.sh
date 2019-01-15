@@ -44,6 +44,8 @@ for CONTAINER in $CONTAINERS; do
 
 done
 
+chmod 400 jenkins/jenkins_home/.ssh/*
+
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
 sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' docker-compose.yml.template > docker-compose.yml.changed
@@ -64,6 +66,7 @@ if [ ! -f "${EM_FILE_FOLDER}/${EM_INSTALLER}" ]; then
 	echo ""
 
 	curl http://oerth-scx.ca.com:8081/artifactory/repo/com/ca/apm/delivery/introscope-installer-unix/10.6.0.179/introscope-installer-unix-10.6.0.179-linuxAMD64.bin -o ${EM_FILE_FOLDER}/${EM_INSTALLER}
+	#cp introscope-installer-unix-10.6.0.179-linuxAMD64.bin ${EM_FILE_FOLDER}/${EM_INSTALLER}
 
 fi
 
