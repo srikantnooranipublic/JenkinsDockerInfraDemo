@@ -7,6 +7,7 @@ services:
       context: ./jenkins
       #dockerfile: $PWD/Dockerfile
     #image: srikns/ca-apm-jenkins:2.0
+    command: sh -c "rm -f ~/.ssh/known_hosts && ssh -o StrictHostKeyChecking=no git@github.com || true && /sbin/tini -- /usr/local/bin/jenkins.sh"
     container_name: jenkins
     environment:
       - JAVA_OPS="-Dhudson.model.DirectoryBrowserSupport.CSP="
