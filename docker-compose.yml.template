@@ -64,16 +64,16 @@ services:
       - HOST_MOUNT_DIR/apm/DB/PGDATA:/var/lib/postgresql/data
 
 
- sonarqube:
-    build:
-      context: ./sonarqube
-      #dockerfile: $PWD/Dockerfile
-    image: sonarqube
-    container_name: sonarqube
-    ports:
-      - "9000:9000"
-    volumes:
-      - HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/extensions:/opt/sonarqube/extensions
-      - HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/logs:/opt/sonarqube/logs
-      - HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/data:/opt/sonarqube/data
-      - HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/conf:/opt/sonarqube/conf
+ #sonarqube:
+    #build:
+      #context: ./sonarqube
+      ##dockerfile: $PWD/Dockerfile
+    #image: sonarqube
+    #container_name: sonarqube
+    #ports:
+      #- "9000:9000"
+    #volumes:
+      #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/extensions:/opt/sonarqube/extensions
+      #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/logs:/opt/sonarqube/logs
+      #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/data:/opt/sonarqube/data
+      #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/conf:/opt/sonarqube/conf
