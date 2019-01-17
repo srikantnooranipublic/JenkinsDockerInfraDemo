@@ -13,6 +13,7 @@ clear
 echo ""
 echo "**JenkinsDockerInfra startup Script:** "
 echo "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
+echo ""
 echo "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
 echo ""
 echo "This will remove following container (if they exists) before setting up everything again... "
