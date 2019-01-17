@@ -88,3 +88,18 @@ fi
 docker-compose up -d
 
 docker ps
+
+echo ""
+echo "Pls give it few mts for the containers to be fully up"
+
+echo ""
+echo " Key URLs and username/passwd"
+echo ""
+echo "Jenkins: http://localhost:8080/ -- username/passwd admin/CADemo123#"
+echo "APM: 127.0.0.1:9999/ApmServer -- username/passwd  admin/"
+echo "APM: 127.0.0.1:9999/#investigator -- username/passwd  admin/"
+
+
+echo "pls login to Jenkins and go to preconfig DevOpsFromGit project. Kick off the build to deploy and deploy the app." 
+
+echo ""
