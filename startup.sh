@@ -11,6 +11,8 @@ CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
 clear
 echo ""
+echo "**********************************************"
+echo ""
 echo "**JenkinsDockerInfra startup Script:** "
 echo "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
 echo ""
@@ -20,6 +22,8 @@ echo "This will remove following container (if they exists) before setting up ev
 echo " $CONTAINERS"
 echo ""
 echo "Pls press Y and Enter to proceed....."
+echo ""
+echo "********************************************"
 echo ""
 
 read READY
@@ -91,6 +95,8 @@ docker-compose up -d
 docker ps
 
 echo ""
+echo "**********************************************"
+echo ""
 echo "Pls give it few mts for the containers to be fully up"
 
 echo ""
@@ -101,6 +107,9 @@ echo "APM: 127.0.0.1:9999/ApmServer -- username/passwd  admin/"
 echo "APM: 127.0.0.1:9999/#investigator -- username/passwd  admin/"
 
 
+echo ""
 echo "pls login to Jenkins and go to preconfig DevOpsFromGit project. Kick off the build to deploy and deploy the app." 
+echo ""
+echo "**********************************************"
 
 echo ""
