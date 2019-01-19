@@ -92,6 +92,25 @@ fi
 #Run docker compose
 docker-compose up -d
 
+
+echo ""
+echo " Pls wait while the containers are coiming up"
+echo ""
+
+sleep 15
+
+echo " Restoring APM DB"
+
+sleep 3
+
+docker stop apm-em
+
+docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
+
+docker start apm-em
+
+sleep 15
+
 docker ps
 
 echo ""
