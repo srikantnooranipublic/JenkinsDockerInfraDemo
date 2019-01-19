@@ -94,7 +94,7 @@ docker-compose up -d
 
 
 echo ""
-echo " Pls wait while the containers are coiming up"
+echo "******* Pls wait while the containers are coiming up"
 echo ""
 
 sleep 15
