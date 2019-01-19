@@ -115,6 +115,8 @@ sleep 3
 
 docker stop apm-em
 
+cp apm/DB/DB_FILES/cemdbBck.data apm/DB/PGDATA/
+
 docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
 
 docker start apm-em
