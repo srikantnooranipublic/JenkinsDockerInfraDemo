@@ -63,6 +63,7 @@ services:
       - "5444:5432"
     volumes:
       - HOST_MOUNT_DIR/apm/DB/PGDATA:/var/lib/postgresql/data
+      - HOST_MOUNT_DIR/apm/DB/DB_FILES/CEM_DB:/CEM_DB
 
 
  #sonarqube:
