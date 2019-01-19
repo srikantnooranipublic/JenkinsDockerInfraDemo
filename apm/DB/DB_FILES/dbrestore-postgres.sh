@@ -52,14 +52,14 @@ fi
 # We don't always drop the jre as part of our installation so we can't assume its location.
 
 # start by checking our assumed location, if not there then ask the user to tell us which JRE to use 
-javaExe=../../../jre/bin/java
+#javaExe=../../../jre/bin/java
 
-if [ -x "$javaExe" ]; then
-  echo ""
-elif [ -z "$JAVA_HOME" ] ; then
-  echo "JAVA_HOME is not set.  Please set the environment variable JAVA_HOME to point to your JRE (1.6 or higher) root folder."
-  exit
-fi
+#if [ -x "$javaExe" ]; then
+  #echo ""
+#elif [ -z "$JAVA_HOME" ] ; then
+  #echo "JAVA_HOME is not set.  Please set the environment variable JAVA_HOME to point to your JRE (1.6 or higher) root folder."
+  #exit
+#fi
 
 
 export PATH="$postgresInstallDir/bin:$postgresInstallDir/bin/64:$PATH"
@@ -103,8 +103,8 @@ echo 'Restoring the database data. The restore may take a long time depending on
 # Using "postgresUser" to connect to DB along with option "-O" to make "postgresUser" owner of all restored objects (fix for TT60019). 
 PGUSER="$postgresUser" PGPASSWORD="$postgresPwd" pg_restore -O -Fc -h $postgresServer -p $postgresPort -d "$postgresDbName" "$backupFile"
 
-echo 'Upgrading the database'
-$(dirname $0)/dbupgrade.sh -databaseName $postgresDbName -databaseType postgres -desiredVersion $targetSchemaVersion -host $postgresServer -user $postgresUser -password $postgresPwd -port $postgresPort -postgresInstalldir $postgresInstallDir -is64bit $is64bit -scriptsDir ../
+#echo 'Upgrading the database'
+#$(dirname $0)/dbupgrade.sh -databaseName $postgresDbName -databaseType postgres -desiredVersion $targetSchemaVersion -host $postgresServer -user $postgresUser -password $postgresPwd -port $postgresPort -postgresInstalldir $postgresInstallDir -is64bit $is64bit -scriptsDir ../
 
 # do the recommended maintenace
 echo 'Doing VACUUM ANALYZE'
