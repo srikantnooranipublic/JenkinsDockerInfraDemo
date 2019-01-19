@@ -7,24 +7,34 @@
 ## MIT License - provided on an as is basis
 #####
 
+DATE=`date +%F_%H_%M_%S`
+LOG_FILE="Logs/JenkinsDockerLog.log.$DATE"
+
+function LOG {
+
+ echo "$1" | tee -a $LOG_FILE
+
+}
+
+
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
 clear
-echo ""
-echo "**********************************************"
-echo ""
-echo "**JenkinsDockerInfra startup Script:** "
-echo "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
-echo ""
-echo "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
-echo ""
-echo "This will remove following container (if they exists) before setting up everything again... "
-echo " $CONTAINERS"
-echo ""
-echo "Pls press Y and Enter to proceed....."
-echo ""
-echo "********************************************"
-echo ""
+LOG ""
+LOG "**********************************************"
+LOG ""
+LOG "**JenkinsDockerInfra startup Script:** "
+LOG "This will setup your complete End to End APM (EM,WV,DB), Jenkins, application etc in a container. "
+LOG ""
+LOG "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
+LOG ""
+LOG "This will remove following container (if they exists) before setting up everything again... "
+LOG " $CONTAINERS"
+LOG ""
+LOG "Pls press Y and Enter to proceed....."
+LOG ""
+LOG "********************************************"
+LOG ""
 
 read READY
 
@@ -40,7 +50,7 @@ fi
 
 #CONTAINERS=`docker ps -aq`
 
-echo "Deleting Containers $CONTAINERS if they exists"	
+LOG "Deleting Containers $CONTAINERS if they exists"	
 
 for CONTAINER in $CONTAINERS; do
 	echo "removing $CONTAINER"
@@ -93,13 +103,13 @@ fi
 docker-compose up -d
 
 
-echo ""
-echo "******* Pls wait while the containers are coiming up"
-echo ""
+LOG ""
+LOG "******* Pls wait while the containers are coiming up"
+LOG ""
 
 sleep 15
 
-echo " Restoring APM DB"
+LOG " Restoring APM DB"
 
 sleep 3
 
@@ -113,22 +123,22 @@ sleep 15
 
 docker ps
 
-echo ""
-echo "**********************************************"
-echo ""
-echo "Pls give it few mts for the containers to be fully up"
+LOG ""
+LOG "**********************************************"
+LOG ""
+LOG "Pls give it few mts for the containers to be fully up"
 
-echo ""
-echo " Key URLs and username/passwd"
-echo ""
-echo "Jenkins: http://localhost:8080/ -- username/passwd admin/CADemo123#"
-echo "APM: 127.0.0.1:9999/ApmServer -- username/passwd  admin/"
-echo "APM: 127.0.0.1:9999/#investigator -- username/passwd  admin/"
+LOG ""
+LOG " Key URLs and username/passwd"
+LOG ""
+LOG "Jenkins: http://localhost:8080/ -- username/passwd admin/CADemo123#"
+LOG "APM: 127.0.0.1:9999/ApmServer -- username/passwd  admin/"
+LOG "APM: 127.0.0.1:9999/#investigator -- username/passwd  admin/"
 
 
-echo ""
-echo "pls login to Jenkins and go to preconfig DevOpsFromGit project. Kick off the build to deploy and deploy the app." 
-echo ""
-echo "**********************************************"
+LOG ""
+LOG "pls login to Jenkins and go to preconfig DevOpsFromGit project. Kick off the build to deploy and deploy the app." 
+LOG ""
+LOG "**********************************************"
 
-echo ""
+LOG ""
