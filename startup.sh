@@ -107,14 +107,14 @@ LOG ""
 LOG "******* Pls wait while the containers are coming up"
 LOG ""
 
-sleep 15
+sleep 25
 
 LOG " Restoring APM DB. Stopping EM"
 
 
 docker stop apm-em
 
-sleep 3
+sleep 8
 
 docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
 
