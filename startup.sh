@@ -104,17 +104,17 @@ docker-compose up -d
 
 
 LOG ""
-LOG "******* Pls wait while the containers are coming up"
+LOG "******* Pls wait while containers are coming up"
 LOG ""
 
-sleep 25
+sleep 60
 
 LOG " Restoring APM DB. Stopping EM"
 
 
 docker stop apm-em
 
-sleep 8
+sleep 30
 
 docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
 
