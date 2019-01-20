@@ -109,13 +109,17 @@ LOG ""
 
 sleep 15
 
-LOG " Restoring APM DB"
+LOG " Restoring APM DB. Stopping EM"
 
-sleep 3
 
 docker stop apm-em
 
+sleep 3
+
 docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
+
+sleep 3
+LOG " Starting EM"
 
 docker start apm-em
 
