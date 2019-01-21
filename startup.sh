@@ -59,6 +59,7 @@ for CONTAINER in $CONTAINERS; do
 
 done
 
+chmod -R 777 jenkins/jenkins_home
 chmod 400 jenkins/jenkins_home/.ssh/*
 
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
@@ -104,17 +105,17 @@ docker-compose up -d
 
 
 LOG ""
-LOG "******* Pls wait while containers are coming up"
+LOG "******* Pls wait while containers are coming up. Could take up to 90 sec"
 LOG ""
 
-sleep 60
+sleep 90
 
-LOG " Restoring APM DB. Stopping EM"
+LOG " Restoring APM DB. Stopping EM. Could take up to 60 sec"
 
 
 docker stop apm-em
 
-sleep 30
+sleep 60
 
 docker exec -it apm-db sh -c "/usr/local/bin/DBScript.sh restore"
 
