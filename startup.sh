@@ -60,6 +60,7 @@ for CONTAINER in $CONTAINERS; do
 done
 
 chmod -R 777 jenkins/jenkins_home
+chown -R 1000:1000 jenkins/jenkins_home/.ssh/
 chmod 400 jenkins/jenkins_home/.ssh/*
 
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
@@ -112,6 +113,10 @@ sleep 90
 
 LOG " Restoring APM DB. Stopping EM. Could take up to 60 sec"
 
+LOG ""
+
+LOG "****Pls ignore any file not found or pg_restore related error below"
+
 
 docker stop apm-em
 
@@ -136,10 +141,16 @@ LOG "Pls give it few mts for the containers to be fully up"
 LOG ""
 LOG " Key URLs and username/passwd"
 LOG ""
+LOG "**** MAC Users ****"
 LOG "Jenkins: http://localhost:8080/ -- username/passwd admin/CADemo123#"
 LOG "APM: 127.0.0.1:9999/ApmServer -- username/passwd  admin/"
 LOG "APM: 127.0.0.1:9999/#investigator -- username/passwd  admin/"
 
+LOG ""
+LOG "**** Linux Users ****"
+LOG "Jenkins: http://<Host_IP>:8080/ -- username/passwd admin/CADemo123#"
+LOG "APM: <Host_IP>:9999/ApmServer -- username/passwd  admin/"
+LOG "APM: <Host_IP>:9999/#investigator -- username/passwd  admin/"
 
 LOG ""
 LOG "pls login to Jenkins and go to preconfig DevOpsFromGit project. Kick off the build to deploy and deploy the app." 
