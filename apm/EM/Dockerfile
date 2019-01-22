@@ -41,7 +41,7 @@ EXPOSE 5001 8081 8444
 COPY ${STD_EM_FILES}/em-jetty-config.xml  config/
 COPY ${STD_EM_FILES}/Introscope_Enterprise_Manager.lax  .
 COPY ${STD_EM_FILES}/IntroscopeEnterpriseManager.properties config/
-#COPY ${STD_EM_FILES}/tess-db-cfg.xml config/
+COPY ${STD_EM_FILES}/DefaultMM.jar config/modules/
 
 RUN rm -f /opt/introscope-install/${INTROSCOPE_BIN} && \
 	chmod -R 755 ${INTROSCOPE_HOME}
