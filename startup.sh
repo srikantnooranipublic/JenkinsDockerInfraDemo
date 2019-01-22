@@ -20,9 +20,11 @@ MAC_LINUX=`uname -a | awk '{ print $1 }'`
 
 DOCKER_TEMPLATE="docker-compose.yml.linux.template"
 
+
 if [ x"$MAC_LINUX" == "xDarwin" ]; then
-i	DOCKER_TEMPLATE="docker-compose.yml.mac.template"
+	DOCKER_TEMPLATE="docker-compose.yml.mac.template"
 fi
+
 
 
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
@@ -38,6 +40,8 @@ LOG "Ensure Docker, Docker Compose is installed and you are VPN'd to CA network"
 LOG ""
 LOG "This will remove following container (if they exists) before setting up everything again... "
 LOG " $CONTAINERS"
+LOG ""
+LOG " platform is $MAC_LINUX and using template $DOCKER_TEMPLATE"
 LOG ""
 LOG "Pls press Y and Enter to proceed....."
 LOG ""
@@ -75,10 +79,9 @@ PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
 sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' $DOCKER_TEMPLATE > ${DOCKER_TEMPLATE}.changed
 sed 's/HOST_DOCKER_PATH/'$DOCKER_PATH'/g' ${DOCKER_TEMPLATE}.changed > ${DOCKER_TEMPLATE}.changed1
-/bin/mv -f ${DOCKER_TEMPLATE}.changed1 ${DOCKER_TEMPLATE}
+/bin/mv -f ${DOCKER_TEMPLATE}.changed1 docker-compose.yml
 /bin/rm -f ${DOCKER_TEMPLATE}.changed
 
-exit
 
 # download EM binary if not download already
 
