@@ -1,5 +1,14 @@
 docker run -d -v /var/run/docker.sock:/var/run/docker.sock \
                 -v $(which docker):/usr/bin/docker \
-		-v /Users/noosr03/Documents/CA_Technical/2_ProjectRepo/JenkinsDockerInfra/jenkins/jenkins_home:/var/jenkins_home \
-		--env JAVA_OPTS="-Dhudson.model.DirectoryBrowserSupport.CSP="  --name=jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins 
-
+                -v /usr/bin/docker-current:/usr/bin/docker-current \
+                -v JENKINS_HOME/jenkins_home:/var/jenkins_home \
+                -v /etc/sysconfig:/etc/sysconfig \
+                -v /etc/docker:/etc/docker \
+                -v /usr/lib64/libsystemd-journal.so.0:/usr/lib/x86_64-linux-gnu/libsystemd-journal.so.0 \
+                -v /usr/lib64/libsystemd-id128.so.0:/usr/lib/x86_64-linux-gnu/libsystemd-id128.so.0 \
+                -v /usr/lib64/libdevmapper.so.1.02:/usr/lib/x86_64-linux-gnu/libdevmapper.so.1.02 \
+                -v /usr/lib64/libgcrypt.so.11:/usr/lib/x86_64-linux-gnu/libgcrypt.so.11 \
+                -v /usr/lib64/libdw.so.1:/usr/lib/x86_64-linux-gnu/libdw.so.1 \
+                -v /usr/lib64/libgpgme.so.11:/usr/lib/x86_64-linux-gnu/libgpgme.so.11 \
+                --privileged=true \
+                --env JAVA_OPTS="-Dhudson.model.DirectoryBrowserSupport.CSP="  --name=jenkins -p 8080:8080 -p 50000:50000 jenkins/jenkins

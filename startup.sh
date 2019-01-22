@@ -16,6 +16,14 @@ function LOG {
 
 }
 
+MAC_LINUX=`uname -a | awk '{ print $1 }'`
+
+DOCKER_TEMPLATE="docker-compose.yml.linux.template"
+
+if [ x"$MAC_LINUX" == "xDarwin" ]; then
+i	DOCKER_TEMPLATE="docker-compose.yml.mac.template"
+fi
+
 
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
@@ -65,11 +73,12 @@ chmod 400 jenkins/jenkins_home/.ssh/*
 
 PWD_NEW=`echo $PWD | sed 's_/_\\\\/_g'`
 DOCKER_PATH=`echo $(which docker)|sed 's_/_\\\\/_g'`
-sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' docker-compose.yml.template > docker-compose.yml.changed
-sed 's/HOST_DOCKER_PATH/'$DOCKER_PATH'/g' docker-compose.yml.changed > docker-compose.yml.changed1
-/bin/mv -f docker-compose.yml.changed1 docker-compose.yml
-/bin/rm -f docker-compose.yml.changed
+sed 's/HOST_MOUNT_DIR/'$PWD_NEW'/g' $DOCKER_TEMPLATE > ${DOCKER_TEMPLATE}.changed
+sed 's/HOST_DOCKER_PATH/'$DOCKER_PATH'/g' ${DOCKER_TEMPLATE}.changed > ${DOCKER_TEMPLATE}.changed1
+/bin/mv -f ${DOCKER_TEMPLATE}.changed1 ${DOCKER_TEMPLATE}
+/bin/rm -f ${DOCKER_TEMPLATE}.changed
 
+exit
 
 # download EM binary if not download already
 
