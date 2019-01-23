@@ -88,3 +88,29 @@ services:
       #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/logs:/opt/sonarqube/logs
       #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/data:/opt/sonarqube/data
       #- HOST_MOUNT_DIR/sonarqube/SQUBE_RUNTIME/conf:/opt/sonarqube/conf
+
+ dockermonitor:
+    image : caapm/dockermonitor:latest
+    environment:
+      - agentManager_url_1=172.17.0.1:5001
+      - containerflow=enabled
+      - interval=60
+      - type=Docker
+      - image=caapm/dockermonitor:latest
+    pid: host
+    command: ["sh","install.sh","--memory=700m","--cpus=0.7"]
+    deploy:
+      mode: global
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 100M
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /dev:/host/dev:ro
+      - /sys:/host/sys:ro
+      - /boot:/host/boot:ro
+      - /home:/host/home:ro
+      - /run:/host/run:ro
+      - /var:/host/var:ro
+      - /proc:/host/proc:ro
