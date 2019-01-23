@@ -7,7 +7,7 @@ echo ""
 COUNTER=0
 while [ $COUNTER -lt 20 ]; do
 
-echo "running Slow Transaction $COUNTER of 12 times. Look under Business Segment|BROADCOM_MOBILE|Get Users via iOS 8"
+echo "running Slow Transaction $COUNTER of 20 times. Every 3rd Trxn is Slow. Look under \"Business Segment|BROADCOM_MOBILE|Get Users via iOS 8\""
 echo ""
 
   curl -X GET \
