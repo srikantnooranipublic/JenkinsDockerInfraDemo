@@ -38,7 +38,7 @@ if [ x"$JENKINS_DEMO_ENV" == "xYES" ]; then
         cp -f ../bigFiles/cemdbBck.data apm/DB/DB_FILES/CEM_DB/
 fi
 
-CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
+CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube dockermonitor jenkinsdockerinfrademo_dockermonitor_1"
 
 clear
 LOG ""
