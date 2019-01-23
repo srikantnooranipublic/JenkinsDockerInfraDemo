@@ -33,6 +33,10 @@ if [ x"$MAC_LINUX" == "xLinux" ]; then
 
 fi
 
+if [ x"$JENKINS_DEMO_ENV == "xYES" ]; then
+        cp -f ../bigFiles/introscope-installer-unix-10.6.0.179-linuxAMD64.bin apm/EM/EM_FILES/
+        cp -f ../bigFiles/cemdbBck.data apm/DB/DB_FILES/CEM_DB/
+fi
 
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
 
