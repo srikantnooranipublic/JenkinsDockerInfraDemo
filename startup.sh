@@ -25,6 +25,13 @@ if [ x"$MAC_LINUX" == "xDarwin" ]; then
 	DOCKER_TEMPLATE="docker-compose.yml.mac.template"
 fi
 
+#disabling firewall etc
+if [ x"$MAC_LINUX" == "xLinux" ]; then
+	systemctl stop firewalld
+	systemctl disable firewalld
+	systemctl start docker
+
+fi
 
 
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube"
