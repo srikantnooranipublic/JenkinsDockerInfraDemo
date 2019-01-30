@@ -1,4 +1,4 @@
-FROM srikns/ca-apm-jenkins:3.0
+FROM srikns/ca-apm-jenkins:4.0
 
 LABEL MAINTAINER="srikant.noorani@ca.com"
 
