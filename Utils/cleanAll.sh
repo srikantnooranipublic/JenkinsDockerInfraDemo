@@ -3,7 +3,7 @@ echo "You Sure... Press Y..."
 
 read isYes
 
-if [ x"$isYes" != "xY" ]
+if [ x"$isYes" != "xY" ]; then
 	echo " Did not get Y.. exiting..."
 	exit
 fi
