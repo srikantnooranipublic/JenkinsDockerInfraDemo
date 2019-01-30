@@ -26,4 +26,8 @@ docker rmi -f $(docker images -aq)
 
 echo ""
 
+docker images
+
+echo ""
+
 echo "Remove any hanging images manually"
