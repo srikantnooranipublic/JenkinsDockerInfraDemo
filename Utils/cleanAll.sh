@@ -1,3 +1,13 @@
+
+echo "You Sure... Press Y..."
+
+read isYes
+
+if [ x"$isYes" != "xY" ]
+	echo " Did not get Y.. exiting..."
+	exit
+fi
+
 echo "Stopping all containers"
 
  docker stop $(docker ps --format "{{.Names}}")
