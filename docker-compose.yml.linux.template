@@ -114,3 +114,16 @@ services:
       - /run:/host/run:ro
       - /var:/host/var:ro
       - /proc:/host/proc:ro
+
+
+#jfrog:
+    #build:
+      #context: ./jfrog
+      #dockerfile: $PWD/Dockerfile
+    #image: docker.bintray.io/jfrog/artifactory-oss
+    #container_name: jfrog
+    #ports:
+      #- "8989:8081"
+    #volumes:
+      #- /Users/noosr03/Documents/CA_Technical/3_SWAT_Projects/Jenkins/DevOpsJenkinsPipeline/jfrog/JFROG_RUNTIME/data:/var/opt/jfrog/artifactory
+
