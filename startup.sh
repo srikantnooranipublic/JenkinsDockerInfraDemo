@@ -27,6 +27,9 @@ fi
 
 #disabling firewall etc
 if [ x"$MAC_LINUX" == "xLinux" ]; then
+	setenforce 0
+	sed -i 's/^SELINUX=enforcing$/SELINUX=disabled/' /etc/selinux/config
+
 	systemctl stop firewalld
 	systemctl disable firewalld
 	systemctl start docker
