@@ -1,3 +1,6 @@
+echo "Sorry this UC is not ready yet ..."
+exit
+
 #Error Transaction
 echo "Running Error Use Case"
 echo ""
