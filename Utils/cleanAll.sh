@@ -1,5 +1,9 @@
 
-echo "You Sure... Press Y..."
+clear
+echo "You Sure... will remove all images. But you can create everything "
+echo ""
+echo "Press Y..."
+
 
 read isYes
 
@@ -31,3 +35,10 @@ docker images
 echo ""
 
 echo "Remove any hanging images manually"
+
+echo ""
+echo "******************"
+echo " remove JenkinsDockerInfraDemo folder manually"
+echo " run git clone https://github.com/srikantnooranipublic/JenkinsDockerInfraDemo.git JenkinsDockerInfraDemo"
+echo " then cd JenkinsDockerInfraDemo and run ./startup.sh"
+echo "******************"
