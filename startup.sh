@@ -99,7 +99,7 @@ EM_INSTALLER=introscope-installer-unix-10.6.0.179-linuxAMD64.bin
 
 
 if [ x"$MAC_LINUX" == "xLinux" ]; then
-        cp -f ../bigFiles/${EM_INSTALLER} ${EM_FILES}
+        cp -f ../bigFiles/${EM_INSTALLER} ${EM_FILE_FOLDER}
         cp -f ../bigFiles/cemdbBck.data apm/DB/DB_FILES/CEM_DB/
 fi
 
