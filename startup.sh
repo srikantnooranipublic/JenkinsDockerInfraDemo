@@ -36,11 +36,6 @@ if [ x"$MAC_LINUX" == "xLinux" ]; then
 
 fi
 
-if [ x"$JENKINS_DEMO_ENV" == "xYES" ]; then
-        cp -f ../bigFiles/introscope-installer-unix-10.6.0.179-linuxAMD64.bin apm/EM/EM_FILES/
-        cp -f ../bigFiles/cemdbBck.data apm/DB/DB_FILES/CEM_DB/
-fi
-
 CONTAINERS="jmeter apm-agent apm-wv apm-em apm-db sonarqube dockermonitor jenkinsdockerinfrademo_dockermonitor_1"
 
 clear
@@ -101,6 +96,12 @@ sed 's/HOST_DOCKER_PATH/'$DOCKER_PATH'/g' ${DOCKER_TEMPLATE}.changed > ${DOCKER_
 
 EM_FILE_FOLDER=apm/EM/EM_FILES
 EM_INSTALLER=introscope-installer-unix-10.6.0.179-linuxAMD64.bin
+
+
+if [ x"$MAC_LINUX" == "xLinux" ]; then
+        cp -f ../bigFiles/${EM_INSTALLER} ${EM_FILES}
+        cp -f ../bigFiles/cemdbBck.data apm/DB/DB_FILES/CEM_DB/
+fi
 
 
 if [ ! -f "${EM_FILE_FOLDER}/${EM_INSTALLER}" ]; then
