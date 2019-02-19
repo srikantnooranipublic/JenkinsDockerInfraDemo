@@ -6,7 +6,7 @@ USER root
 
 RUN /bin/rm -rf /etc/sudoers
 
-RUN apt-get update && apt-get install -y maven && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y maven && apt-get install -y libltdl7 && apt-get install -y sudo && rm -rf /var/lib/apt/lists/*
 
 RUN echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
